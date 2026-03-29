@@ -58,7 +58,8 @@ const DEMO_URLS = {
 
 // ─── Composants inline ──────────────────────────────────────────
 
-const VideoThumbnail = ({
+// Version compacte : petite thumbnail + lien (pour section intro)
+const VideoCard = ({
   videoId,
   title,
   label,
@@ -73,29 +74,53 @@ const VideoThumbnail = ({
       target="_blank"
       style={{ textDecoration: 'none' }}
     >
-      <Img
-        src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
-        width="536"
-        alt={`Video : ${title}`}
-        style={{
-          width: '100%',
-          borderRadius: '8px',
-          border: `1px solid ${BD}`,
-          display: 'block',
-        }}
-      />
-      <Text
-        style={{
-          fontSize: '12px',
-          color: BLUE,
-          margin: '6px 0 0 0',
-          textDecoration: 'underline',
-        }}
-      >
-        {label || 'Voir la video'}
-      </Text>
+      <Row>
+        <Column style={{ width: '160px', verticalAlign: 'middle' }}>
+          <Img
+            src={`https://img.youtube.com/vi/${videoId}/mqdefault.jpg`}
+            width="150"
+            alt={`Video : ${title}`}
+            style={{
+              borderRadius: '6px',
+              border: `1px solid ${BD}`,
+              display: 'block',
+            }}
+          />
+        </Column>
+        <Column style={{ verticalAlign: 'middle', paddingLeft: '12px' }}>
+          <Text style={{ fontSize: '14px', fontWeight: 700, color: T1, margin: '0 0 4px 0', lineHeight: '20px' }}>
+            {title}
+          </Text>
+          <Text style={{ fontSize: '12px', color: BLUE, margin: '0', textDecoration: 'underline' }}>
+            {label || 'Voir la video'}
+          </Text>
+        </Column>
+      </Row>
     </Link>
   </Section>
+);
+
+// Version lien simple : juste un texte cliquable (pour dans les FeatureCards)
+const VideoLink = ({
+  videoId,
+  label,
+}: {
+  videoId: string;
+  label?: string;
+}) => (
+  <Link
+    href={`https://www.youtube.com/watch?v=${videoId}`}
+    target="_blank"
+    style={{
+      fontSize: '12px',
+      color: BLUE,
+      textDecoration: 'underline',
+      display: 'inline-block',
+      marginTop: '4px',
+    }}
+  >
+    ▶ {label || 'Voir la demo video Anthropic'}
+  </Link>
 );
 
 const FeatureCard = ({
@@ -154,12 +179,18 @@ const FeatureCard = ({
         >
           {description}
         </Text>
+        {videoId && (
+          <>
+            <VideoLink videoId={videoId} />
+            <br />
+          </>
+        )}
         {docLink && (
           <Link
             href={docLink}
             style={{
               fontSize: '12px',
-              color: BLUE,
+              color: T3,
               textDecoration: 'underline',
             }}
           >
@@ -168,7 +199,6 @@ const FeatureCard = ({
         )}
       </Column>
     </Row>
-    {videoId && <VideoThumbnail videoId={videoId} title={title} />}
   </Section>
 );
 
@@ -446,12 +476,11 @@ export const LeclercCoworkFormation = ({
             </Text>
 
             {/* Video webinaire officiel */}
-            <VideoThumbnail
+            <VideoCard
               videoId="zfWfczd6keE"
-              title="Webinaire officiel — The Future of AI at Work"
-              label="Webinaire Anthropic : presentation complete de Cowork (30 min)"
+              title="Webinaire Anthropic — Presentation complete de Cowork"
+              label="Voir le webinaire (30 min)"
             />
-            <Section style={{ height: '24px' }} />
 
             <FeatureCard
               icon="📱"
