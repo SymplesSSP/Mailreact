@@ -1058,39 +1058,45 @@ export const LeclercCoworkFormation = ({
 
           <Hr style={divider} />
 
-          {/* ════════════════ PROCESS TSE + DRIVE + CLAUDE ════════════════ */}
+          {/* ════════════════ PROCESS DOCUMENTAIRE ════════════════ */}
           <Section style={content}>
             <Heading as="h2" style={sectionTitle}>
-              Utiliser Claude depuis votre environnement
+              Gestion documentaire avec Google Drive
             </Heading>
             <Text style={sectionSubtitle}>
-              Votre TSE ne donne pas acces a Claude — voici le process simple
-              pour travailler avec les deux
+              Un process simple pour centraliser vos documents et les exploiter avec l'IA
             </Text>
+
+            {/* Infographic */}
+            <Img
+              src="static/infographic-tse-drive-claude.png"
+              width="536"
+              alt="Process documentaire : poste de travail, Google Drive, Claude"
+              style={{
+                width: '100%',
+                borderRadius: '8px',
+                display: 'block',
+                marginBottom: '20px',
+              }}
+            />
 
             <Text style={paragraph}>
-              Votre magasin utilise un <strong>TSE (Terminal Server)</strong> sous
-              Windows et un abonnement <strong>Gemini Entreprise</strong> qui
-              inclut Google Drive. Claude n'est pas autorise sur le TSE, mais
-              Google Drive sert de <strong>passerelle</strong> entre les deux
-              environnements.
+              Google Drive centralise vos documents de travail. Depuis n'importe
+              quel poste, vous deposez vos fichiers sur Drive. Claude y accede
+              via son connecteur integre, les traite, et sauvegarde les resultats
+              au meme endroit.
             </Text>
 
-            {/* Process en 4 etapes */}
             <Section style={stepBox}>
               <Row>
                 <Column style={stepNum}>
                   <Text style={stepCircle}>1</Text>
                 </Column>
                 <Column style={stepBody}>
-                  <Text style={stepTitle}>
-                    TSE &rarr; Sauvegarder sur Google Drive
-                  </Text>
+                  <Text style={stepTitle}>Deposer vos documents sur Drive</Text>
                   <Text style={stepDesc}>
-                    Depuis votre session TSE, enregistrez vos fichiers
-                    (rapports, tableaux, notes) dans un dossier Google Drive
-                    dedie (ex: &ldquo;Dossier IA&rdquo;). Drive est deja
-                    accessible via votre abonnement Gemini.
+                    Rapports de ventes, plannings, notes de reunion, avis clients
+                    — tout se centralise dans un dossier Drive dedie.
                   </Text>
                 </Column>
               </Row>
@@ -1102,13 +1108,10 @@ export const LeclercCoworkFormation = ({
                   <Text style={{ ...stepCircle, backgroundColor: BLUE }}>2</Text>
                 </Column>
                 <Column style={stepBody}>
-                  <Text style={stepTitle}>
-                    Claude &rarr; Connecter Google Drive
-                  </Text>
+                  <Text style={stepTitle}>Claude accede a vos fichiers via Drive</Text>
                   <Text style={stepDesc}>
-                    Depuis Claude Desktop ou claude.ai (sur votre navigateur
-                    personnel ou telephone), activez le connecteur Google Drive.
-                    Claude accede directement a vos fichiers.
+                    Le connecteur Google Drive est active dans Claude. Il lit,
+                    analyse et travaille sur vos documents directement.
                   </Text>
                 </Column>
               </Row>
@@ -1120,12 +1123,10 @@ export const LeclercCoworkFormation = ({
                   <Text style={{ ...stepCircle, backgroundColor: BLUE }}>3</Text>
                 </Column>
                 <Column style={stepBody}>
-                  <Text style={stepTitle}>
-                    Claude traite et sauvegarde sur Drive
-                  </Text>
+                  <Text style={stepTitle}>Claude traite et depose le resultat</Text>
                   <Text style={stepDesc}>
-                    Claude analyse vos fichiers, genere les rapports/reponses,
-                    et sauvegarde les resultats dans le meme dossier Drive.
+                    Synthese, rapport PDF, reponses clients, tableau mis a jour
+                    — le resultat est sauvegarde dans le meme dossier Drive.
                   </Text>
                 </Column>
               </Row>
@@ -1137,12 +1138,10 @@ export const LeclercCoworkFormation = ({
                   <Text style={stepCircle}>4</Text>
                 </Column>
                 <Column style={stepBody}>
-                  <Text style={stepTitle}>
-                    TSE &rarr; Recuperer le resultat
-                  </Text>
+                  <Text style={stepTitle}>Recuperer le resultat depuis n'importe quel poste</Text>
                   <Text style={stepDesc}>
-                    De retour sur le TSE, ouvrez Google Drive et recuperez
-                    le fichier genere par Claude. Pret a utiliser.
+                    Le fichier genere est dans Drive, accessible depuis votre
+                    poste de travail, votre telephone ou votre tablette.
                   </Text>
                 </Column>
               </Row>
@@ -1158,10 +1157,9 @@ export const LeclercCoworkFormation = ({
               }}
             >
               <Text style={{ fontSize: '13px', color: T2, margin: '0', lineHeight: '20px' }}>
-                <strong style={{ color: BLUE }}>En resume</strong> : Google Drive
-                est le pont entre votre TSE et Claude. Vos fichiers restent dans
-                Drive, accessibles des deux cotes. Aucune installation sur le
-                TSE, aucune autorisation IT supplementaire.
+                <strong style={{ color: BLUE }}>Simple</strong> : vos documents
+                restent dans Google Drive, accessibles partout. Aucune installation
+                supplementaire, aucune configuration technique.
               </Text>
             </Section>
           </Section>
