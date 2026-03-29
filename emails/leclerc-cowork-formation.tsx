@@ -100,7 +100,7 @@ const VideoCard = ({
   </Section>
 );
 
-// Mini-card video : petite thumbnail + bouton (pour dans les FeatureCards)
+// Bouton video compact (pas de thumbnail, juste un bouton style)
 const VideoLink = ({
   videoId,
   label,
@@ -108,44 +108,23 @@ const VideoLink = ({
   videoId: string;
   label?: string;
 }) => (
-  <Section style={{ marginTop: '10px' }}>
-    <Link
-      href={`https://www.youtube.com/watch?v=${videoId}`}
-      target="_blank"
-      style={{ textDecoration: 'none' }}
-    >
-      <Row>
-        <Column style={{ width: '90px', verticalAlign: 'middle' }}>
-          <Img
-            src={`https://img.youtube.com/vi/${videoId}/mqdefault.jpg`}
-            width="80"
-            height="45"
-            alt="Video demo"
-            style={{
-              borderRadius: '4px',
-              display: 'block',
-            }}
-          />
-        </Column>
-        <Column style={{ verticalAlign: 'middle' }}>
-          <Text
-            style={{
-              fontSize: '12px',
-              fontWeight: 700,
-              color: '#ffffff',
-              backgroundColor: BLUE,
-              borderRadius: '4px',
-              padding: '4px 10px',
-              margin: '0',
-              display: 'inline-block',
-            }}
-          >
-            ▶ {label || 'Demo video'}
-          </Text>
-        </Column>
-      </Row>
-    </Link>
-  </Section>
+  <Link
+    href={`https://www.youtube.com/watch?v=${videoId}`}
+    target="_blank"
+    style={{
+      fontSize: '11px',
+      fontWeight: 600,
+      color: '#ffffff',
+      backgroundColor: BLUE,
+      borderRadius: '4px',
+      padding: '4px 10px',
+      textDecoration: 'none',
+      display: 'inline-block',
+      marginTop: '6px',
+    }}
+  >
+    ▶ {label || 'Demo video'}
+  </Link>
 );
 
 const FeatureCard = ({
