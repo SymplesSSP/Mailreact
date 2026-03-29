@@ -356,6 +356,12 @@ export const LeclercCoworkFormation = ({
         <Container style={container}>
 
           {/* ════════════════ HEADER ════════════════ */}
+          <Img
+            src="static/banner-hero.png"
+            width="600"
+            alt="IA et productivite"
+            style={{ width: '100%', display: 'block' }}
+          />
           <Section style={header}>
             <Section
               style={{
@@ -368,7 +374,7 @@ export const LeclercCoworkFormation = ({
               }}
             >
               <Img
-                src="static/leclerc-logo.png"
+                src="static/leclerc-logo-animated.gif"
                 width="130"
                 height="87"
                 alt="E.Leclerc"
@@ -866,6 +872,12 @@ export const LeclercCoworkFormation = ({
 
           {/* ════════════════ SKILL + TACHES PROGRAMMEES ════════════════ */}
           <Section style={content}>
+            <Img
+              src="static/infographic-automation-cycle.png"
+              width="400"
+              alt="Cycle automatisation : Skill + Programmation + Resultats"
+              style={{ width: '75%', display: 'block', margin: '0 auto 16px auto' }}
+            />
             <Heading as="h2" style={sectionTitle}>
               Skill + Tache Programmee = Automatisation totale
             </Heading>
@@ -934,6 +946,12 @@ export const LeclercCoworkFormation = ({
 
           {/* ════════════════ PROMPTS EXPLORATOIRES ════════════════ */}
           <Section style={content}>
+            <Img
+              src="static/illustration-discovery.png"
+              width="300"
+              alt="Decouverte et exploration"
+              style={{ width: '50%', display: 'block', margin: '0 auto 12px auto' }}
+            />
             <Heading as="h2" style={sectionTitle}>
               Vous ne savez pas par ou commencer ?
             </Heading>
@@ -1187,32 +1205,69 @@ export const LeclercCoworkFormation = ({
 
           <Hr style={divider} />
 
-          {/* ════════════════ REACT EMAIL ════════════════ */}
+          {/* ════════════════ USE CASE TECHNO ════════════════ */}
           <Section style={content}>
             <Heading as="h2" style={sectionTitle}>
-              Comment est fait ce mail ?
+              Ce mail est un cas d'usage concret
             </Heading>
             <Text style={paragraph}>
-              Ce mail de formation est lui-meme concu avec{' '}
-              <Link href="https://react.email" style={link}>
-                React Email
-              </Link>
-              , un framework open source qui permet de construire des emails
-              en <strong>React + TypeScript</strong> — le meme langage que
-              les applications web modernes.
+              Ce mail de formation est lui-meme un exemple de ce que l'IA
+              et les outils modernes permettent de produire. Voici les
+              technologies utilisees pour le concevoir :
             </Text>
-            <Text style={paragraph}>
-              Chaque section, chaque carte, chaque prompt est un{' '}
-              <strong>composant reutilisable</strong>. Le rendu est
-              compatible Gmail, Outlook et Apple Mail — teste sur les
-              principaux clients de messagerie.
-            </Text>
-            <Text style={{ fontSize: '13px', color: T3, margin: '0', lineHeight: '20px' }}>
-              C'est un exemple concret de ce que l'IA permet : Claude a contribue
-              a la conception de ce template — recherche du contenu, structuration
-              pedagogique, verification des faits. La technologie au service de la
-              formation.
-            </Text>
+
+            <Section
+              style={{
+                backgroundColor: BG,
+                borderRadius: '12px',
+                padding: '16px 20px',
+                marginBottom: '16px',
+                border: `1px solid ${BD}`,
+              }}
+            >
+              <Text style={{ fontSize: '13px', color: T1, margin: '0 0 8px 0', lineHeight: '20px' }}>
+                <strong style={{ color: BLUE }}>React Email</strong> — Framework
+                open source pour construire des emails en React + TypeScript.
+                Compatible Gmail, Outlook, Apple Mail.
+              </Text>
+              <Text style={{ fontSize: '13px', color: T1, margin: '0 0 8px 0', lineHeight: '20px' }}>
+                <strong style={{ color: BLUE }}>Claude Code</strong> — L'agent
+                IA qui a code ce template : structure, composants, styles,
+                verification des faits, integration des liens officiels.
+              </Text>
+              <Text style={{ fontSize: '13px', color: T1, margin: '0 0 8px 0', lineHeight: '20px' }}>
+                <strong style={{ color: BLUE }}>Gemini (Nano Banana 2)</strong> — A
+                genere les infographies et illustrations que vous voyez dans
+                ce mail (diagramme Drive, cycle automatisation, banniere).
+              </Text>
+              <Text style={{ fontSize: '13px', color: T1, margin: '0 0 8px 0', lineHeight: '20px' }}>
+                <strong style={{ color: BLUE }}>Chrome DevTools MCP</strong> — Tests
+                visuels automatises sur desktop et mobile pour verifier le
+                rendu avant envoi.
+              </Text>
+              <Text style={{ fontSize: '13px', color: T1, margin: '0', lineHeight: '20px' }}>
+                <strong style={{ color: BLUE }}>GitHub</strong> — Le code source
+                est versionne, les evolutions tracees par issues, les
+                prochaines sessions preparees collaborativement.
+              </Text>
+            </Section>
+
+            <Section
+              style={{
+                backgroundColor: ORANGE_LIGHT,
+                borderRadius: '12px',
+                padding: '14px 18px',
+                borderLeft: `4px solid ${ORANGE}`,
+              }}
+            >
+              <Text style={{ fontSize: '13px', color: T2, margin: '0', lineHeight: '20px' }}>
+                <strong style={{ color: ORANGE }}>En resume</strong> : 3 IA
+                (Claude, Gemini, Chrome DevTools) et 3 outils (React Email,
+                GitHub, Node.js) ont collabore pour produire cet email
+                pedagogique. C'est exactement le type d'industrialisation
+                que nous mettons en place pour votre quotidien.
+              </Text>
+            </Section>
           </Section>
 
           <Hr style={divider} />
