@@ -1055,10 +1055,9 @@ export const LeclercCoworkFormation = ({
             </Text>
             <Text style={paragraph}>
               Chaque section, chaque carte, chaque prompt est un{' '}
-              <strong>composant reutilisable</strong>. On peut generer
-              des variantes pour d'autres magasins en changeant juste les props
-              (destinataire, magasin, contenu). Le rendu est compatible
-              Gmail, Outlook et Apple Mail.
+              <strong>composant reutilisable</strong>. Le rendu est
+              compatible Gmail, Outlook et Apple Mail — teste sur les
+              principaux clients de messagerie.
             </Text>
             <Text style={{ fontSize: '13px', color: T3, margin: '0', lineHeight: '20px' }}>
               C'est un exemple concret de ce que l'IA permet : Claude a contribue
