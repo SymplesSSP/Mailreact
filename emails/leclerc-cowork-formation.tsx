@@ -1082,9 +1082,9 @@ export const LeclercCoworkFormation = ({
 
             <Text style={paragraph}>
               Google Drive centralise vos documents de travail. Depuis n'importe
-              quel poste, vous deposez vos fichiers sur Drive. Claude y accede
-              via son connecteur integre, les traite, et sauvegarde les resultats
-              au meme endroit.
+              quel poste, vous deposez vos fichiers sur Drive. Les IA comme
+              Claude, Gemini ou ChatGPT s'y connectent, traitent vos documents,
+              et sauvegardent les resultats au meme endroit.
             </Text>
 
             <Section style={stepBox}>
@@ -1108,13 +1108,34 @@ export const LeclercCoworkFormation = ({
                   <Text style={{ ...stepCircle, backgroundColor: BLUE }}>2</Text>
                 </Column>
                 <Column style={stepBody}>
-                  <Text style={stepTitle}>Claude accede a vos fichiers via Drive</Text>
+                  <Text style={stepTitle}>Connecter votre IA a Google Drive</Text>
                   <Text style={stepDesc}>
-                    Le connecteur Google Drive est active dans Claude. Il lit,
-                    analyse et travaille sur vos documents directement.
+                    Chaque IA se connecte a Drive en quelques clics :
                   </Text>
                 </Column>
               </Row>
+            </Section>
+
+            {/* Comment connecter chaque IA */}
+            <Section
+              style={{
+                backgroundColor: BG,
+                borderRadius: '8px',
+                padding: '14px 18px',
+                marginBottom: '16px',
+                marginLeft: '52px',
+                border: `1px solid ${BD}`,
+              }}
+            >
+              <Text style={{ fontSize: '13px', color: T1, margin: '0 0 6px 0', lineHeight: '20px' }}>
+                <strong>Claude</strong> — Parametres &gt; Connecteurs &gt; Google Drive &gt; Autoriser
+              </Text>
+              <Text style={{ fontSize: '13px', color: T1, margin: '0 0 6px 0', lineHeight: '20px' }}>
+                <strong>Gemini</strong> — Deja integre avec votre abonnement Google Workspace
+              </Text>
+              <Text style={{ fontSize: '13px', color: T1, margin: '0', lineHeight: '20px' }}>
+                <strong>ChatGPT</strong> — Parametres &gt; Applications connectees &gt; Google Drive
+              </Text>
             </Section>
 
             <Section style={stepBox}>
@@ -1123,7 +1144,7 @@ export const LeclercCoworkFormation = ({
                   <Text style={{ ...stepCircle, backgroundColor: BLUE }}>3</Text>
                 </Column>
                 <Column style={stepBody}>
-                  <Text style={stepTitle}>Claude traite et depose le resultat</Text>
+                  <Text style={stepTitle}>L'IA traite et depose le resultat</Text>
                   <Text style={stepDesc}>
                     Synthese, rapport PDF, reponses clients, tableau mis a jour
                     — le resultat est sauvegarde dans le meme dossier Drive.
