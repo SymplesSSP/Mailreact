@@ -458,6 +458,7 @@ export const LeclercCoworkFormation = ({
               title="Dispatch — Controlez a distance"
               description="Envoyez des taches depuis votre telephone pendant que vous etes en rayon. Claude les execute sur votre poste au bureau. Il suffit de scanner un QR code pour lier les deux appareils."
               color={BLUE_LIGHT}
+              videoId="fVIV-L49eBs"
               docLink="https://support.claude.com/en/articles/13947068"
               docLabel="Guide Dispatch"
             />
@@ -467,6 +468,7 @@ export const LeclercCoworkFormation = ({
               title="Computer Use — Pilotage de l'ecran"
               description="Claude controle votre souris, clavier et navigateur. Il remplit des formulaires, navigue entre les logiciels et execute des workflows complets — comme MyClaw dont nous avons discute."
               color={ORANGE_LIGHT}
+              videoId="NAauIR6JFps"
               docLink="https://support.claude.com/en/articles/14128542"
               docLabel="Guide Computer Use"
             />
@@ -493,6 +495,7 @@ export const LeclercCoworkFormation = ({
               title="Taches Programmees"
               description="Automatisez les rapports quotidiens, syntheses hebdomadaires, nettoyage de dossiers. Tapez /schedule dans Cowork. Frequences : horaire, quotidienne, hebdomadaire."
               color={BLUE_LIGHT}
+              videoId="b-ntWZqHF78"
               docLink="https://support.claude.com/en/articles/13854387"
               docLabel="Guide Taches Programmees"
             />
@@ -502,6 +505,7 @@ export const LeclercCoworkFormation = ({
               title="Skills — Instructions reutilisables"
               description="Des modes d'emploi que Claude suit pour chaque type de tache. Skills integrees : PDF, Word, PowerPoint, Excel, Canvas Design. Creez les votres avec /skill-creator."
               color={ORANGE_LIGHT}
+              videoId="bjdBVZa66oU"
             />
 
             <FeatureCard
@@ -509,6 +513,7 @@ export const LeclercCoworkFormation = ({
               title="Plugins — Kits metier complets"
               description="Un plugin regroupe skills, connecteurs et sous-agents en un seul package. Disponibles pour : Ventes, Finance, RH, Marketing, Operations, Data, Juridique."
               color={BLUE_LIGHT}
+              videoId="v5IOHK5xFlc"
               docLink="https://support.claude.com/en/articles/13837440"
               docLabel="Guide Plugins"
             />
@@ -518,6 +523,7 @@ export const LeclercCoworkFormation = ({
               title="Connecteurs — 50+ integrations"
               description="Google Drive, Gmail, Slack, Notion, Jira, Asana, Linear, HubSpot, Microsoft 365, Figma, Canva, Snowflake, Amplitude... Connectez vos outils existants en un clic."
               color={ORANGE_LIGHT}
+              videoId="cIctgHKEeMA"
               docLink="https://claude.com/connectors"
               docLabel="Voir tous les connecteurs"
             />
@@ -527,6 +533,7 @@ export const LeclercCoworkFormation = ({
               title="Projets — Espaces dedies"
               description="Chaque projet a ses fichiers, instructions, memoire et taches programmees. Un espace 'Gestion Magasin', un autre 'RH', un troisieme 'Relation Client' — chacun isole."
               color={BLUE_LIGHT}
+              videoId="orTd3grSYsQ"
             />
 
             {/* Note liens anglais */}
