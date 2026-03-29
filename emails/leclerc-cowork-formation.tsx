@@ -498,7 +498,7 @@ export const LeclercCoworkFormation = ({
               description="Envoyez des taches depuis votre telephone pendant que vous etes en rayon. Claude les execute sur votre poste au bureau. Il suffit de scanner un QR code pour lier les deux appareils."
               color={BLUE_LIGHT}
               videoId="fVIV-L49eBs"
-              docLink="https://support.claude.com/en/articles/13947068"
+              docLink="https://support.claude.com/fr/articles/13947068"
               docLabel="Guide Dispatch"
             />
 
@@ -508,7 +508,7 @@ export const LeclercCoworkFormation = ({
               description="Claude controle votre souris, clavier et navigateur. Il remplit des formulaires, navigue entre les logiciels et execute des workflows complets — comme MyClaw dont nous avons discute."
               color={ORANGE_LIGHT}
               videoId="NAauIR6JFps"
-              docLink="https://support.claude.com/en/articles/14128542"
+              docLink="https://support.claude.com/fr/articles/14128542"
               docLabel="Guide Computer Use"
             />
 
@@ -535,7 +535,7 @@ export const LeclercCoworkFormation = ({
               description="Automatisez les rapports quotidiens, syntheses hebdomadaires, nettoyage de dossiers. Tapez /schedule dans Cowork. Frequences : horaire, quotidienne, hebdomadaire."
               color={BLUE_LIGHT}
               videoId="b-ntWZqHF78"
-              docLink="https://support.claude.com/en/articles/13854387"
+              docLink="https://support.claude.com/fr/articles/13854387"
               docLabel="Guide Taches Programmees"
             />
 
@@ -553,7 +553,7 @@ export const LeclercCoworkFormation = ({
               description="Un plugin regroupe skills, connecteurs et sous-agents en un seul package. Disponibles pour : Ventes, Finance, RH, Marketing, Operations, Data, Juridique."
               color={BLUE_LIGHT}
               videoId="v5IOHK5xFlc"
-              docLink="https://support.claude.com/en/articles/13837440"
+              docLink="https://support.claude.com/fr/articles/13837440"
               docLabel="Guide Plugins"
             />
 
@@ -585,10 +585,12 @@ export const LeclercCoworkFormation = ({
               }}
             >
               <Text style={{ fontSize: '12px', color: T3, margin: '0', lineHeight: '18px' }}>
-                <strong>Les guides ci-dessus sont en anglais.</strong> Pour les
-                lire en francais : ouvrez le lien dans Chrome, faites clic droit
-                sur la page, puis &ldquo;Traduire en francais&rdquo;. La traduction
-                automatique de Chrome fonctionne parfaitement sur ces pages.
+                Tous les guides renvoient vers le{' '}
+                <Link href="https://support.claude.com/fr" style={{ color: BLUE, textDecoration: 'underline' }}>
+                  Centre d'aide Claude en francais
+                </Link>
+                . Les videos YouTube sont en anglais — activez les sous-titres
+                traduits si besoin (icone CC dans le lecteur).
               </Text>
             </Section>
           </Section>
@@ -804,7 +806,7 @@ export const LeclercCoworkFormation = ({
             <Text style={{ fontSize: '13px', color: T3, margin: '0', lineHeight: '20px' }}>
               Documentation :{' '}
               <Link
-                href="https://support.claude.com/en/articles/12512198-how-to-create-custom-skills"
+                href="https://support.claude.com/fr/articles/12512198-how-to-create-custom-skills"
                 style={{ color: BLUE, textDecoration: 'underline' }}
               >
                 Creer un skill personnalise
