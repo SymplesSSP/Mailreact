@@ -1241,9 +1241,15 @@ export const LeclercCoworkFormation = ({
                 ce mail (diagramme Drive, cycle automatisation, banniere).
               </Text>
               <Text style={{ fontSize: '13px', color: T1, margin: '0 0 8px 0', lineHeight: '20px' }}>
-                <strong style={{ color: BLUE }}>Chrome DevTools MCP</strong> — Tests
-                visuels automatises sur desktop et mobile pour verifier le
-                rendu avant envoi.
+                <strong style={{ color: BLUE }}>Remotion + Playwright</strong> — Captures
+                d'ecran automatisees, puis montage video pro avec animations,
+                annotations et transitions. Les demos que vous voyez sont generees
+                par du code, pas filmees a la main.
+              </Text>
+              <Text style={{ fontSize: '13px', color: T1, margin: '0 0 8px 0', lineHeight: '20px' }}>
+                <strong style={{ color: BLUE }}>Google Drive</strong> — Hebergement
+                des visuels, videos et documents. Le meme Drive que vous utilisez
+                au quotidien.
               </Text>
               <Text style={{ fontSize: '13px', color: T1, margin: '0', lineHeight: '20px' }}>
                 <strong style={{ color: BLUE }}>GitHub</strong> — Le code source
@@ -1261,11 +1267,11 @@ export const LeclercCoworkFormation = ({
               }}
             >
               <Text style={{ fontSize: '13px', color: T2, margin: '0', lineHeight: '20px' }}>
-                <strong style={{ color: ORANGE }}>En resume</strong> : 3 IA
-                (Claude, Gemini, Chrome DevTools) et 3 outils (React Email,
-                GitHub, Node.js) ont collabore pour produire cet email
-                pedagogique. C'est exactement le type d'industrialisation
-                que nous mettons en place pour votre quotidien.
+                <strong style={{ color: ORANGE }}>En resume</strong> : plusieurs
+                IA (Claude, Gemini) et outils modernes (React Email, Remotion,
+                Playwright, GitHub, Google Drive) ont collabore pour produire
+                cet email. C'est exactement le type d'industrialisation que
+                nous mettons en place pour votre quotidien.
               </Text>
             </Section>
           </Section>
