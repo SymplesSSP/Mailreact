@@ -864,6 +864,123 @@ export const LeclercCoworkFormation = ({
 
           <Hr style={divider} />
 
+          {/* ════════════════ SKILL + TACHES PROGRAMMEES ════════════════ */}
+          <Section style={content}>
+            <Heading as="h2" style={sectionTitle}>
+              Skill + Tache Programmee = Automatisation totale
+            </Heading>
+            <Text style={paragraph}>
+              Un <strong>skill</strong> apprend a Claude COMMENT faire une tache.
+              Une <strong>tache programmee</strong> lui dit QUAND la faire.
+              Combinez les deux et Claude travaille pour vous en permanence
+              — sans aucune intervention.
+            </Text>
+
+            {/* Exemples concrets */}
+            <Section
+              style={{
+                backgroundColor: BLUE_LIGHT,
+                borderRadius: '12px',
+                padding: '16px 20px',
+                marginBottom: '16px',
+                borderLeft: `4px solid ${BLUE}`,
+              }}
+            >
+              <Text style={{ fontSize: '14px', fontWeight: 700, color: BLUE, margin: '0 0 10px 0' }}>
+                Exemples concrets pour {magasin}
+              </Text>
+              <Text style={{ fontSize: '13px', color: T2, margin: '0 0 8px 0', lineHeight: '20px' }}>
+                <strong>Goodays tous les matins a 8h</strong> — Le skill &ldquo;Reponse Goodays&rdquo;
+                se declenche automatiquement, traite les avis de la veille, et vous presente
+                les reponses a valider quand vous arrivez au bureau.
+              </Text>
+              <Text style={{ fontSize: '13px', color: T2, margin: '0 0 8px 0', lineHeight: '20px' }}>
+                <strong>Rapport hebdo chaque lundi 7h</strong> — Le skill &ldquo;Synthese Hebdo&rdquo;
+                compile les KPIs, genere le PDF et le depose sur Google Drive.
+                Vous n'avez plus qu'a l'ouvrir en comite de direction.
+              </Text>
+              <Text style={{ fontSize: '13px', color: T2, margin: '0', lineHeight: '20px' }}>
+                <strong>Ruptures de stock chaque jour 6h</strong> — Claude verifie,
+                identifie les 20 produits critiques, et prepare l'email de commande
+                fournisseur. Tout est pret quand le responsable rayon arrive.
+              </Text>
+            </Section>
+
+            <Text style={{ fontSize: '13px', color: T2, margin: '0 0 16px 0', lineHeight: '20px' }}>
+              Pour programmer une tache : ouvrez Cowork, tapez{' '}
+              <strong>/schedule</strong>, decrivez ce que Claude doit faire et
+              a quelle frequence. C'est tout. Pas de code, pas de configuration
+              technique.
+            </Text>
+
+            <Section
+              style={{
+                backgroundColor: ORANGE_LIGHT,
+                borderRadius: '12px',
+                padding: '14px 18px',
+                borderLeft: `4px solid ${ORANGE}`,
+              }}
+            >
+              <Text style={{ fontSize: '13px', color: T2, margin: '0', lineHeight: '20px' }}>
+                <strong style={{ color: ORANGE }}>Le vrai pouvoir</strong> : une fois
+                un skill cree et une tache programmee, Claude fait le travail
+                24h/24 sans que vous ayez a y penser. Vous ne gerez plus les
+                taches — vous gerez les resultats.
+              </Text>
+            </Section>
+          </Section>
+
+          <Hr style={divider} />
+
+          {/* ════════════════ PROMPTS EXPLORATOIRES ════════════════ */}
+          <Section style={content}>
+            <Heading as="h2" style={sectionTitle}>
+              Vous ne savez pas par ou commencer ?
+            </Heading>
+            <Text style={sectionSubtitle}>
+              Ces prompts guident Claude pour qu'il analyse votre quotidien
+              et vous propose des automatisations. Copiez-collez dans Claude Desktop
+              ou claude.ai — il fait le reste.
+            </Text>
+
+            <PromptExample
+              feature="🔍 Decouverte — Analyser mon quotidien"
+              context="Claude explore vos habitudes et propose des automatisations :"
+              prompt="Je suis directeur d'un E.Leclerc. Je passe mes journees entre les reunions, les mails, les plannings, les avis clients Goodays, les rapports de vente et la gestion du personnel. Analyse mes taches recurrentes et propose-moi les 5 automatisations qui me feraient gagner le plus de temps. Pour chacune, explique comment la mettre en place avec Cowork."
+              featureColor={BLUE}
+            />
+
+            <PromptExample
+              feature="🔍 Decouverte — A partir de mes fichiers"
+              context="Donnez vos documents a Claude, il identifie les opportunities :"
+              prompt="Je te donne acces a mon Google Drive. Regarde les fichiers que j'utilise le plus souvent et propose-moi des skills et des taches programmees pour automatiser ce que je fais manuellement. Explique chaque proposition simplement."
+              featureColor={BLUE}
+            />
+
+            <PromptExample
+              feature="🎯 Premiere automatisation — Cle en main"
+              context="Claude vous guide pas a pas pour votre premiere automatisation :"
+              prompt="Je n'ai jamais utilise Cowork. Guide-moi pas a pas pour creer ma premiere automatisation utile. Je veux que chaque lundi matin, un rapport de la semaine precedente soit pret quand j'arrive. Explique-moi comme si je n'y connaissais rien en informatique."
+              featureColor={ORANGE}
+            />
+
+            <PromptExample
+              feature="🎯 Transformer une tache manuelle — Pas a pas"
+              context="Vous faites quelque chose a la main ? Claude le transforme en automatisation :"
+              prompt="Chaque matin je fais ca manuellement : j'ouvre le tableau des ventes d'hier, je note les chiffres par rayon, je calcule les ecarts avec la veille, et j'envoie un mail au comite. Transforme cette routine en une tache programmee Cowork qui fait tout automatiquement chaque matin a 7h."
+              featureColor={ORANGE}
+            />
+
+            <PromptExample
+              feature="💡 Audit complet — Tout automatiser"
+              context="Claude fait l'audit de tout ce qui peut etre automatise :"
+              prompt="Fais un audit complet de ce qu'un directeur de magasin E.Leclerc peut automatiser avec Cowork. Classe par categorie (Goodays, ventes, RH, planning, fournisseurs, communication). Pour chaque tache, donne le prompt exact a utiliser et dis-moi si ca peut etre programme automatiquement."
+              featureColor="#059669"
+            />
+          </Section>
+
+          <Hr style={divider} />
+
           {/* ════════════════ PROMPTS METIER ════════════════ */}
           <Section style={content}>
             <Section
