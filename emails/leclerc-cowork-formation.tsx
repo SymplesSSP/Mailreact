@@ -100,7 +100,7 @@ const VideoCard = ({
   </Section>
 );
 
-// Version lien simple : juste un texte cliquable (pour dans les FeatureCards)
+// Mini-card video : petite thumbnail + bouton (pour dans les FeatureCards)
 const VideoLink = ({
   videoId,
   label,
@@ -108,19 +108,44 @@ const VideoLink = ({
   videoId: string;
   label?: string;
 }) => (
-  <Link
-    href={`https://www.youtube.com/watch?v=${videoId}`}
-    target="_blank"
-    style={{
-      fontSize: '12px',
-      color: BLUE,
-      textDecoration: 'underline',
-      display: 'inline-block',
-      marginTop: '4px',
-    }}
-  >
-    ▶ {label || 'Voir la demo video Anthropic'}
-  </Link>
+  <Section style={{ marginTop: '10px' }}>
+    <Link
+      href={`https://www.youtube.com/watch?v=${videoId}`}
+      target="_blank"
+      style={{ textDecoration: 'none' }}
+    >
+      <Row>
+        <Column style={{ width: '90px', verticalAlign: 'middle' }}>
+          <Img
+            src={`https://img.youtube.com/vi/${videoId}/mqdefault.jpg`}
+            width="80"
+            height="45"
+            alt="Video demo"
+            style={{
+              borderRadius: '4px',
+              display: 'block',
+            }}
+          />
+        </Column>
+        <Column style={{ verticalAlign: 'middle' }}>
+          <Text
+            style={{
+              fontSize: '12px',
+              fontWeight: 700,
+              color: '#ffffff',
+              backgroundColor: BLUE,
+              borderRadius: '4px',
+              padding: '4px 10px',
+              margin: '0',
+              display: 'inline-block',
+            }}
+          >
+            ▶ {label || 'Demo video'}
+          </Text>
+        </Column>
+      </Row>
+    </Link>
+  </Section>
 );
 
 const FeatureCard = ({
@@ -189,9 +214,15 @@ const FeatureCard = ({
           <Link
             href={docLink}
             style={{
-              fontSize: '12px',
-              color: T3,
-              textDecoration: 'underline',
+              fontSize: '11px',
+              fontWeight: 600,
+              color: BLUE,
+              backgroundColor: BLUE_LIGHT,
+              borderRadius: '4px',
+              padding: '3px 8px',
+              textDecoration: 'none',
+              display: 'inline-block',
+              marginTop: '6px',
             }}
           >
             {docLabel || 'En savoir plus'}
