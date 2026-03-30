@@ -9,9 +9,13 @@
   },
   "dependencies": {
     "@react-email/components": "1.0.10",
+    "@remotion/bundler": "^4.0.441",
+    "@remotion/cli": "^4.0.441",
+    "@remotion/renderer": "^4.0.441",
     "playwright": "^1.58.2",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "remotion": "^4.0.441"
   },
   "devDependencies": {
     "@react-email/preview-server": "5.2.10",
