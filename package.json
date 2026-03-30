@@ -5,7 +5,10 @@
   "scripts": {
     "build": "email build",
     "dev": "email dev",
-    "export": "email export"
+    "export": "email export",
+    "remotion:studio": "npx remotion studio src/remotion/index.ts",
+    "remotion:render": "npx remotion render src/remotion/index.ts",
+    "remotion:render:all": "npx remotion render src/remotion/index.ts DemoSkillCreation out/demo-skill-creation.mp4 && npx remotion render src/remotion/index.ts DemoSkillAction out/demo-skill-action.mp4 && npx remotion render src/remotion/index.ts DemoAutomation out/demo-automation.mp4"
   },
   "dependencies": {
     "@react-email/components": "1.0.10",
