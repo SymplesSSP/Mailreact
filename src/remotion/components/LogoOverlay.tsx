@@ -10,7 +10,7 @@ interface LogoOverlayProps {
 export const LogoOverlay: React.FC<LogoOverlayProps> = ({
   logoSrc,
   position = "top-right",
-  size = 60,
+  size = 120,
 }) => {
   const frame = useCurrentFrame();
   const { durationInFrames } = useVideoConfig();

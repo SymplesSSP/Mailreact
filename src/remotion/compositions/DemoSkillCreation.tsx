@@ -33,8 +33,8 @@ export const DemoSkillCreation: React.FC<Props> = ({ screenshotsDir }) => {
   return (
     <AbsoluteFill style={{ backgroundColor: "#1a1a2e" }}>
       <Series>
-        {/* ── Intro titre (2s) ── */}
-        <Series.Sequence durationInFrames={60}>
+        {/* ── Intro titre (4s) ── */}
+        <Series.Sequence durationInFrames={120}>
           <Transition>
             <AbsoluteFill
               style={{
@@ -70,8 +70,8 @@ export const DemoSkillCreation: React.FC<Props> = ({ screenshotsDir }) => {
           </Transition>
         </Series.Sequence>
 
-        {/* ── Etape 1 : Saisie du prompt (4s) ── */}
-        <Series.Sequence durationInFrames={120}>
+        {/* ── Etape 1 : Saisie du prompt (8s) ── */}
+        <Series.Sequence durationInFrames={240}>
           <Transition>
             <AbsoluteFill>
               <KenBurns src={img("step-01.png")} from="top-left" to="center" />
@@ -84,8 +84,8 @@ export const DemoSkillCreation: React.FC<Props> = ({ screenshotsDir }) => {
           </Transition>
         </Series.Sequence>
 
-        {/* ── Etape 2 : Claude genere (4s) ── */}
-        <Series.Sequence durationInFrames={120}>
+        {/* ── Etape 2 : Claude genere (8s) ── */}
+        <Series.Sequence durationInFrames={240}>
           <Transition>
             <AbsoluteFill>
               <KenBurns src={img("step-02.png")} from="center" to="bottom-right" />
@@ -98,8 +98,8 @@ export const DemoSkillCreation: React.FC<Props> = ({ screenshotsDir }) => {
           </Transition>
         </Series.Sequence>
 
-        {/* ── Etape 3 : Resultat final (3s) ── */}
-        <Series.Sequence durationInFrames={90}>
+        {/* ── Etape 3 : Resultat final (6s) ── */}
+        <Series.Sequence durationInFrames={180}>
           <Transition>
             <AbsoluteFill>
               <KenBurns src={img("step-03.png")} from="bottom-left" to="center" scaleTo={1.1} />
@@ -113,8 +113,8 @@ export const DemoSkillCreation: React.FC<Props> = ({ screenshotsDir }) => {
           </Transition>
         </Series.Sequence>
 
-        {/* ── Outro (2s) ── */}
-        <Series.Sequence durationInFrames={60}>
+        {/* ── Outro (4s) ── */}
+        <Series.Sequence durationInFrames={120}>
           <Transition>
             <AbsoluteFill
               style={{
@@ -151,7 +151,7 @@ export const DemoSkillCreation: React.FC<Props> = ({ screenshotsDir }) => {
       </Series>
 
       {/* Logo E.Leclerc persistant */}
-      <LogoOverlay logoSrc={staticFile("emails/static/leclerc-logo.png")} />
+      <LogoOverlay logoSrc={staticFile("leclerc-logo.png")} />
     </AbsoluteFill>
   );
 };

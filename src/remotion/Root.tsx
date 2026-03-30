@@ -15,34 +15,34 @@ export const Root: React.FC = () => {
       <Composition
         id="DemoSkillCreation"
         component={DemoSkillCreation}
-        durationInFrames={15 * FPS}
+        durationInFrames={30 * FPS}
         fps={FPS}
         width={WIDTH}
         height={HEIGHT}
         defaultProps={{
-          screenshotsDir: "public/screenshots/skill-creation",
+          screenshotsDir: "screenshots/skill-creation",
         }}
       />
       <Composition
         id="DemoSkillAction"
         component={DemoSkillAction}
-        durationInFrames={12 * FPS}
+        durationInFrames={24 * FPS}
         fps={FPS}
         width={WIDTH}
         height={HEIGHT}
         defaultProps={{
-          screenshotsDir: "public/screenshots/skill-action",
+          screenshotsDir: "screenshots/skill-action",
         }}
       />
       <Composition
         id="DemoAutomation"
         component={DemoAutomation}
-        durationInFrames={10 * FPS}
+        durationInFrames={20 * FPS}
         fps={FPS}
         width={WIDTH}
         height={HEIGHT}
         defaultProps={{
-          screenshotsDir: "public/screenshots/automation",
+          screenshotsDir: "screenshots/automation",
         }}
       />
     </Folder>

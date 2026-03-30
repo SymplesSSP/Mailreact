@@ -28,8 +28,8 @@ export const DemoAutomation: React.FC<Props> = ({ screenshotsDir }) => {
   return (
     <AbsoluteFill style={{ backgroundColor: "#1a1a2e" }}>
       <Series>
-        {/* ── Intro (1.5s) ── */}
-        <Series.Sequence durationInFrames={45}>
+        {/* ── Intro (3s) ── */}
+        <Series.Sequence durationInFrames={90}>
           <Transition>
             <AbsoluteFill
               style={{
@@ -65,8 +65,8 @@ export const DemoAutomation: React.FC<Props> = ({ screenshotsDir }) => {
           </Transition>
         </Series.Sequence>
 
-        {/* ── Etape 1 : Le skill existe deja (2.5s) ── */}
-        <Series.Sequence durationInFrames={75}>
+        {/* ── Etape 1 : Le skill existe deja (5s) ── */}
+        <Series.Sequence durationInFrames={150}>
           <Transition>
             <AbsoluteFill>
               <KenBurns src={img("step-01.png")} from="top-left" to="center" />
@@ -79,8 +79,8 @@ export const DemoAutomation: React.FC<Props> = ({ screenshotsDir }) => {
           </Transition>
         </Series.Sequence>
 
-        {/* ── Etape 2 : /schedule configuration (3s) ── */}
-        <Series.Sequence durationInFrames={90}>
+        {/* ── Etape 2 : /schedule configuration (6s) ── */}
+        <Series.Sequence durationInFrames={180}>
           <Transition>
             <AbsoluteFill>
               <KenBurns src={img("step-02.png")} from="center" to="bottom-right" />
@@ -94,8 +94,8 @@ export const DemoAutomation: React.FC<Props> = ({ screenshotsDir }) => {
           </Transition>
         </Series.Sequence>
 
-        {/* ── Etape 3 : Resultat automation (1.5s) ── */}
-        <Series.Sequence durationInFrames={45}>
+        {/* ── Etape 3 : Resultat automation (3s) ── */}
+        <Series.Sequence durationInFrames={90}>
           <Transition>
             <AbsoluteFill>
               <KenBurns src={img("step-03.png")} from="bottom-left" to="center" scaleTo={1.1} />
@@ -109,8 +109,8 @@ export const DemoAutomation: React.FC<Props> = ({ screenshotsDir }) => {
           </Transition>
         </Series.Sequence>
 
-        {/* ── Outro (1.5s) ── */}
-        <Series.Sequence durationInFrames={45}>
+        {/* ── Outro (3s) ── */}
+        <Series.Sequence durationInFrames={90}>
           <Transition>
             <AbsoluteFill
               style={{
@@ -147,7 +147,7 @@ export const DemoAutomation: React.FC<Props> = ({ screenshotsDir }) => {
         </Series.Sequence>
       </Series>
 
-      <LogoOverlay logoSrc={staticFile("emails/static/leclerc-logo.png")} />
+      <LogoOverlay logoSrc={staticFile("leclerc-logo.png")} />
     </AbsoluteFill>
   );
 };
