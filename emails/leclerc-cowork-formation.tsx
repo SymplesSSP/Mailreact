@@ -35,27 +35,6 @@ const T3 = '#64748b';
 const T4 = '#94a3b8';
 const BD = '#e2e8f0';
 
-// ─── Demo URLs (thumbnails + GIFs heberges sur Google Drive) ─────
-// INSTRUCTIONS : Uploadez les GIFs sur Google Drive, obtenez les liens
-// partageables, puis remplacez les URLs ci-dessous.
-// Thumbnails : utilisez https://lh3.googleusercontent.com/d/{FILE_ID} pour
-// les images ou un screenshot heberge sur votre CDN.
-const DEMO_URLS = {
-  // ┌─────────────────────────────────────────────────────────────┐
-  // │ APRES UPLOAD SUR GOOGLE DRIVE :                            │
-  // │ 1. Upload les 2 GIFs + 2 thumbnails sur Drive              │
-  // │ 2. Clic droit > Obtenir le lien > Tout le monde avec lien  │
-  // │ 3. Remplace les URLs ci-dessous                            │
-  // │ Format thumbnail Drive : https://lh3.googleusercontent.com/d/{ID} │
-  // └─────────────────────────────────────────────────────────────┘
-  // GIF 1 : Creation du skill (demo-skill-goodays-leclerc.gif)
-  skillCreation: 'https://drive.google.com/file/d/REMPLACER_PAR_ID_GIF_SKILL/view',
-  skillCreationThumb: 'static/thumb-skill-creation.png',
-  // GIF 2 : Reponse avis client (demo-reponse-goodays-leclerc.gif)
-  skillInAction: 'https://drive.google.com/file/d/REMPLACER_PAR_ID_GIF_REPONSE/view',
-  skillInActionThumb: 'static/thumb-skill-action.png',
-};
-
 // ─── Composants inline ──────────────────────────────────────────
 
 // Version compacte : petite thumbnail + lien (pour section intro)
@@ -374,9 +353,9 @@ export const LeclercCoworkFormation = ({
               }}
             >
               <Img
-                src="static/leclerc-logo-animated.gif"
+                src="static/leclerc-logo.png"
                 width="130"
-                height="87"
+                height="130"
                 alt="E.Leclerc"
                 style={{ display: 'block', margin: '0 auto' }}
               />
@@ -435,7 +414,7 @@ export const LeclercCoworkFormation = ({
               L'actualite IA de la semaine
             </Heading>
             <Text style={sectionSubtitle}>
-              Ce qui vient de sortir chez Anthropic — semaine du 23 au 29 mars 2026
+              Ce qui vient de sortir chez Anthropic — semaine du 17 au 29 mars 2026
             </Text>
 
             <TimelineItem
@@ -445,7 +424,7 @@ export const LeclercCoworkFormation = ({
               isNew
             />
             <TimelineItem
-              date="23 mars"
+              date="17 mars"
               title="Dispatch"
               description="Envoyez des taches a Claude depuis votre telephone. Il les execute sur votre ordinateur, meme en votre absence."
               isNew
@@ -568,7 +547,6 @@ export const LeclercCoworkFormation = ({
               title="Connecteurs — 50+ integrations"
               description="Google Drive, Gmail, Slack, Notion, Jira, Asana, Linear, HubSpot, Microsoft 365, Figma, Canva, Snowflake, Amplitude... Connectez vos outils existants en un clic."
               color={ORANGE_LIGHT}
-              videoId="cIctgHKEeMA"
               docLink="https://claude.com/connectors"
               docLabel="Voir tous les connecteurs"
             />
@@ -578,7 +556,6 @@ export const LeclercCoworkFormation = ({
               title="Projets — Espaces dedies"
               description="Chaque projet a ses fichiers, instructions, memoire et taches programmees. Un espace 'Gestion Magasin', un autre 'RH', un troisieme 'Relation Client' — chacun isole."
               color={BLUE_LIGHT}
-              videoId="orTd3grSYsQ"
             />
 
             {/* Note liens anglais */}
@@ -720,58 +697,6 @@ export const LeclercCoworkFormation = ({
                   </Text>
                 </Column>
               </Row>
-            </Section>
-
-            {/* Demo 1 : Creation du skill Goodays (screenshot cliquable → GIF Drive) */}
-            <Section style={{ marginTop: '16px', marginBottom: '8px' }}>
-              <Link
-                href={DEMO_URLS.skillCreation}
-                target="_blank"
-                style={{ textDecoration: 'none' }}
-              >
-                <Img
-                  src={DEMO_URLS.skillCreationThumb}
-                  width="536"
-                  alt="Demo : creation d'un skill Reponse Goodays dans Claude"
-                  style={{
-                    width: '100%',
-                    borderRadius: '8px',
-                    border: `1px solid ${BD}`,
-                    display: 'block',
-                  }}
-                />
-                <Text style={demoCaption}>
-                  Demo 1 : Claude cree le skill &ldquo;Reponse Goodays&rdquo; avec
-                  classification par priorite, charte de ton, variables par magasin
-                  — <span style={{ color: BLUE, textDecoration: 'underline' }}>Voir la demo animee</span>
-                </Text>
-              </Link>
-            </Section>
-
-            {/* Demo 2 : Le skill en action (screenshot cliquable → GIF Drive) */}
-            <Section style={{ marginTop: '8px', marginBottom: '16px' }}>
-              <Link
-                href={DEMO_URLS.skillInAction}
-                target="_blank"
-                style={{ textDecoration: 'none' }}
-              >
-                <Img
-                  src={DEMO_URLS.skillInActionThumb}
-                  width="536"
-                  alt="Demo : Claude repond a un avis client 2/5 avec le skill Goodays"
-                  style={{
-                    width: '100%',
-                    borderRadius: '8px',
-                    border: `1px solid ${BD}`,
-                    display: 'block',
-                  }}
-                />
-                <Text style={demoCaption}>
-                  Demo 2 : Un avis client 2/5 &rarr; Claude redige la reponse E.Leclerc
-                  et propose des ajustements avant envoi
-                  — <span style={{ color: BLUE, textDecoration: 'underline' }}>Voir la demo animee</span>
-                </Text>
-              </Link>
             </Section>
 
             {/* Skills integrees */}
@@ -1236,19 +1161,13 @@ export const LeclercCoworkFormation = ({
                 verification des faits, integration des liens officiels.
               </Text>
               <Text style={{ fontSize: '13px', color: T1, margin: '0 0 8px 0', lineHeight: '20px' }}>
-                <strong style={{ color: BLUE }}>Gemini (Nano Banana 2)</strong> — A
+                <strong style={{ color: BLUE }}>Gemini</strong> — A
                 genere les infographies et illustrations que vous voyez dans
                 ce mail (diagramme Drive, cycle automatisation, banniere).
               </Text>
               <Text style={{ fontSize: '13px', color: T1, margin: '0 0 8px 0', lineHeight: '20px' }}>
-                <strong style={{ color: BLUE }}>Remotion + Playwright</strong> — Captures
-                d'ecran automatisees, puis montage video pro avec animations,
-                annotations et transitions. Les demos que vous voyez sont generees
-                par du code, pas filmees a la main.
-              </Text>
-              <Text style={{ fontSize: '13px', color: T1, margin: '0 0 8px 0', lineHeight: '20px' }}>
                 <strong style={{ color: BLUE }}>Google Drive</strong> — Hebergement
-                des visuels, videos et documents. Le meme Drive que vous utilisez
+                des visuels et documents. Le meme Drive que vous utilisez
                 au quotidien.
               </Text>
               <Text style={{ fontSize: '13px', color: T1, margin: '0', lineHeight: '20px' }}>
@@ -1268,8 +1187,8 @@ export const LeclercCoworkFormation = ({
             >
               <Text style={{ fontSize: '13px', color: T2, margin: '0', lineHeight: '20px' }}>
                 <strong style={{ color: ORANGE }}>En resume</strong> : plusieurs
-                IA (Claude, Gemini) et outils modernes (React Email, Remotion,
-                Playwright, GitHub, Google Drive) ont collabore pour produire
+                IA (Claude, Gemini) et outils modernes (React Email,
+                GitHub, Google Drive) ont collabore pour produire
                 cet email. C'est exactement le type d'industrialisation que
                 nous mettons en place pour votre quotidien.
               </Text>
@@ -1525,13 +1444,6 @@ const sectionSubtitle = {
   lineHeight: '21px',
 };
 
-// Session recap
-const sessionRecapItem = {
-  fontSize: '13px',
-  color: '#334155',
-  margin: '0 0 4px 0',
-  lineHeight: '20px',
-};
 
 // Steps
 const stepBox = { marginBottom: '16px' };
@@ -1610,12 +1522,3 @@ const footerLegal = {
   margin: '8px 0 0 0',
 };
 
-// Demo captions
-const demoCaption = {
-  fontSize: '12px',
-  color: T3,
-  margin: '6px 0 0 0',
-  fontStyle: 'italic' as const,
-  textAlign: 'center' as const,
-  lineHeight: '18px',
-};
