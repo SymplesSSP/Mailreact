@@ -845,7 +845,7 @@ export const LeclercCoworkFormation = ({
           {/* ════════════════ SKILL + TACHES PROGRAMMEES ════════════════ */}
           <Section style={content}>
             <Img
-              src="https://symplesssp.github.io/Mailreact/emails/static/infographic-skill-automation-v3.png"
+              src="https://symplesssp.github.io/Mailreact/emails/static/infographic-skill-automation-final.png"
               width="400"
               alt="Du Skill a l'Automatisation Totale — 4 etapes : Creer, Connecter, Programmer, Automatise"
               style={{ width: '80%', display: 'block', margin: '0 auto 4px auto' }}
