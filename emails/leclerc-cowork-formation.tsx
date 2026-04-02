@@ -845,7 +845,7 @@ export const LeclercCoworkFormation = ({
           {/* ════════════════ SKILL + TACHES PROGRAMMEES ════════════════ */}
           <Section style={content}>
             <Img
-              src="https://symplesssp.github.io/Mailreact/emails/static/infographic-automation-cycle.png"
+              src="https://symplesssp.github.io/Mailreact/emails/static/infographic-skill-automation.png"
               width="400"
               alt="Cycle automatisation : Skill + Programmation + Resultats"
               style={{ width: '75%', display: 'block', margin: '0 auto 16px auto' }}
