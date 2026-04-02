@@ -428,7 +428,7 @@ export const LeclercCoworkFormation = ({
               L'actualite IA de la semaine
             </Heading>
             <Text style={sectionSubtitle}>
-              Ce qui vient de sortir chez Anthropic — semaine du 17 au 29 mars 2026
+              Ce qui vient de sortir chez Anthropic — du 17 mars au 2 avril 2026
             </Text>
 
             <TimelineItem
@@ -458,16 +458,43 @@ export const LeclercCoworkFormation = ({
               title="Claude Mythos — Fuite d'un nouveau modele"
               description="Un leak accidentel revele 'Claude Mythos' (nom de code : Capybara) — un nouveau palier de modele au-dessus d'Opus. Anthropic confirme : 'le plus capable que nous ayons construit'. Pas encore accessible au public."
             />
+            <TimelineItem
+              date="1 avril"
+              title="Reflechissez avec Claude — Assistant du quotidien"
+              description="Nouvelle experience sur claude.ai : Claude aide a rediger des emails avec coaching (ton, structure), trouve des recettes avec photos depuis le web, et planifie des excursions avec carte interactive et itineraire. Tout se fait dans une conversation naturelle."
+              isNew
+            />
 
-            {/* Blog officiel */}
+            {/* Liens docs FR */}
             <Section style={{ marginTop: '8px' }}>
               <Text style={{ fontSize: '13px', color: T3, margin: '0', lineHeight: '20px' }}>
-                Source officielle :{' '}
+                Sources :{' '}
                 <Link
                   href="https://claude.com/blog/dispatch-and-computer-use"
                   style={{ color: BLUE, textDecoration: 'underline' }}
                 >
-                  claude.com/blog — Dispatch & Computer Use
+                  Dispatch & Computer Use
+                </Link>
+                {' | '}
+                <Link
+                  href="https://support.claude.com/fr/articles/10684626-activation-et-utilisation-de-la-recherche-web"
+                  style={{ color: BLUE, textDecoration: 'underline' }}
+                >
+                  Recherche web
+                </Link>
+                {' | '}
+                <Link
+                  href="https://support.claude.com/fr/articles/13979539-elements-visuels-personnalises-dans-le-chat"
+                  style={{ color: BLUE, textDecoration: 'underline' }}
+                >
+                  Visuels interactifs
+                </Link>
+                {' | '}
+                <Link
+                  href="https://support.claude.com/fr/articles/13345190-commencer-avec-cowork"
+                  style={{ color: BLUE, textDecoration: 'underline' }}
+                >
+                  Guide Cowork
                 </Link>
               </Text>
             </Section>
