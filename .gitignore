@@ -2,3 +2,7 @@ node_modules/
 out/
 .DS_Store
 *.log
+.playwright-mcp/
+.react-email/
+audit-*.png
+mail-*.png
