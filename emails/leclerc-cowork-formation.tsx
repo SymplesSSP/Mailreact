@@ -756,38 +756,40 @@ export const LeclercCoworkFormation = ({
           {/* ════════════════ PROMPTS CREATION DE SKILLS ════════════════ */}
           <Section style={content}>
             <Heading as="h2" style={sectionTitle}>
-              Prompts pour creer vos propres skills
+              Creer des skills puissants
             </Heading>
             <Text style={sectionSubtitle}>
-              Copiez ces prompts dans Claude — il generera le skill adapte a votre besoin.
-              Vous n'avez qu'a repondre a ses questions, puis cliquer &ldquo;Copier dans vos competences&rdquo;.
+              Ces prompts exploitent les vrais outils de Claude Desktop :
+              Computer Use (pilotage ecran), connecteurs (Google Drive, Gmail),
+              Dispatch (depuis le telephone) et taches programmees.
+              Joignez vos fichiers reels — Claude analyse et produit le skill.
             </Text>
 
             <PromptExample
-              feature="⚡ Creer un skill — Reponses Goodays"
-              context="Claude va vous poser des questions sur votre ton, vos regles, puis generer le SKILL.md complet :"
-              prompt="Je suis directeur d'un magasin E.Leclerc. Cree-moi un skill 'Reponse Goodays' qui redige des reponses professionnelles et empathiques aux avis clients. Le skill doit : classer par priorite (note < 3 en premier), adapter le ton E.Leclerc, proposer les reponses pour validation avant envoi. Donne-moi le fichier SKILL.md complet pret a installer."
+              feature="🧬 Voice DNA — Capturer votre ton via vos vrais emails"
+              context="Joignez 5-10 emails ou reponses clients que VOUS avez rediges. Claude extrait votre ADN d'ecriture et cree un skill reutilisable a vie :"
+              prompt="Voici des exemples de mes communications reelles [joindre fichiers]. Analyse en profondeur mon style : longueur de phrases, registre, formules recurrentes, niveau de formalite, structure de mes reponses, mots que j'utilise vs ceux que j'evite. Extrais un profil 'Voice DNA' detaille. Genere un SKILL.md 'Mon Ton Leclerc' qui force Claude a ecrire EXACTEMENT comme moi — reponses clients, emails internes, notes de service. Le skill doit inclure : 10 regles d'ecriture extraites de mes exemples, 5 formules interdites (ton generique IA), et un test de validation avec 3 exemples entree/sortie. Ensuite programme avec /schedule une tache quotidienne a 8h : Claude lit les nouveaux avis clients sur Drive, redige les reponses avec mon ton, et les presente pour validation."
               featureColor={ORANGE}
             />
 
             <PromptExample
-              feature="⚡ Creer un skill — Rapport hebdomadaire"
-              context="Automatisez votre synthese du lundi matin :"
-              prompt="Cree un skill 'Synthese Hebdo Leclerc' qui genere chaque lundi un rapport structure : CA par rayon vs N-1, top 5 produits, alertes stock, satisfaction Goodays de la semaine. Format PDF avec graphiques. Le skill doit s'adapter au magasin (nom, rayons) via des variables."
+              feature="📊 Analyseur decisonnel — Business Case automatique"
+              context="Joignez un devis fournisseur, une proposition ou un projet. Claude produit le business case complet et cree le skill pour automatiser toutes les futures analyses :"
+              prompt="Voici [joindre : devis, proposition, projet d'investissement]. Analyse ce document et produis un business case : 1) Resume executif 3 lignes, 2) Couts directs + couts caches detectes, 3) Benefices en 3 scenarios (conservateur/attendu/optimiste), 4) ROI et delai de rentabilite, 5) Risques avec probabilite, 6) Recommandation Go/No-Go. Genere ensuite un SKILL.md 'Analyse Decision Leclerc' qui automatise cette methode pour tout futur document. Le skill doit : extraire les chiffres cles automatiquement, comparer avec les seuils du magasin, et produire un PDF via la skill integree. Bonus : ajoute une instruction pour que Claude aille chercher sur Google Drive les donnees de reference (CA, marges par rayon) via le connecteur, afin de contextualiser chaque analyse."
               featureColor={ORANGE}
             />
 
             <PromptExample
-              feature="⚡ Creer un skill — Compte-rendu de reunion"
-              context="Plus jamais de CR baclee — Claude structure tout :"
-              prompt="Cree un skill 'CR Reunion Leclerc' qui transforme des notes brutes en compte-rendu structure : participants, ordre du jour, decisions prises, actions (responsable + deadline), points en attente. Format professionnel PDF. Le ton doit etre factuel et concis."
+              feature="🔍 Audit eclair — Scan de donnees + plan d'action"
+              context="Deposez vos exports (ventes, stock, RH, satisfaction client) sur Google Drive. Claude s'y connecte, scanne tout, et produit un diagnostic actionnable :"
+              prompt="Connecte-toi a mon Google Drive (dossier 'Donnees Magasin'). Scanne tous les fichiers presents : exports ventes, stock, planning RH, avis clients. Pour chaque source, identifie : 1) Les 5 signaux forts (tendances, anomalies, patterns), 2) Les 3 risques imminents avec deadline, 3) Les 3 quick wins actionnables cette semaine. Croise les donnees entre sources (ex: correlation entre satisfaction client et jours de sous-effectif). Produis un rapport PDF d'une page avec le plan d'action 30 jours. Genere un SKILL.md 'Audit Eclair Leclerc' qui reproduit cette analyse chaque semaine. Enfin, programme avec /schedule un audit automatique chaque lundi a 6h — le rapport est pret dans Drive quand j'arrive."
               featureColor={ORANGE}
             />
 
             <PromptExample
-              feature="⚡ Creer un skill adaptatif — A partir de vos documents"
-              context="Vous ne savez pas quel skill creer ? Donnez vos documents a Claude, il proposera :"
-              prompt="Voici [3 documents types de mon quotidien : un planning, un rapport de ventes, des avis Goodays]. Analyse ces documents et propose-moi les 3 skills les plus utiles pour automatiser mon travail de directeur E.Leclerc. Pour chaque skill, explique pourquoi il est pertinent et genere le SKILL.md."
+              feature="🎯 Meta-skill — Claude scanne votre quotidien et cree LE skill #1"
+              context="Donnez a Claude l'acces a votre Drive et vos apps. Il observe, mesure, et construit l'automatisation a plus fort impact :"
+              prompt="Connecte-toi a mon Google Drive. Identifie les 20 fichiers que j'ai le plus modifies ce mois-ci. Pour chacun, estime : temps manuel, frequence, potentiel d'automatisation. Classe par impact (temps x frequence). Pour le #1 — la tache qui me coute le plus — genere un SKILL.md complet et pret a installer, avec : frontmatter YAML, description de declenchement precise, instructions pas a pas, exemples entree/sortie, gestion des cas limites. Le skill doit exploiter les outils Cowork disponibles : connecteur Drive pour lire/ecrire les fichiers, Computer Use si besoin d'interagir avec un logiciel sans connecteur, /schedule pour automatiser l'execution. Explique pourquoi CE skill est le plus rentable et combien de temps il me fait gagner par semaine."
               featureColor={BLUE}
             />
           </Section>
@@ -826,7 +828,7 @@ export const LeclercCoworkFormation = ({
                 Exemples concrets pour {magasin}
               </Text>
               <Text style={{ fontSize: '13px', color: T2, margin: '0 0 8px 0', lineHeight: '20px' }}>
-                <strong>Goodays tous les matins a 8h</strong> — Le skill &ldquo;Reponse Goodays&rdquo;
+                <strong>Avis clients tous les matins a 8h</strong> — Le skill &ldquo;Reponse Clients&rdquo;
                 se declenche automatiquement, traite les avis de la veille, et vous presente
                 les reponses a valider quand vous arrivez au bureau.
               </Text>
@@ -888,7 +890,7 @@ export const LeclercCoworkFormation = ({
             <PromptExample
               feature="🔍 Decouverte — Analyser mon quotidien"
               context="Claude explore vos habitudes et propose des automatisations :"
-              prompt="Je suis directeur d'un E.Leclerc. Je passe mes journees entre les reunions, les mails, les plannings, les avis clients Goodays, les rapports de vente et la gestion du personnel. Analyse mes taches recurrentes et propose-moi les 5 automatisations qui me feraient gagner le plus de temps. Pour chacune, explique comment la mettre en place avec Cowork."
+              prompt="Je suis directeur d'un E.Leclerc. Je passe mes journees entre les reunions, les mails, les plannings, les avis clients, les rapports de vente et la gestion du personnel. Analyse mes taches recurrentes et propose-moi les 5 automatisations qui me feraient gagner le plus de temps. Pour chacune, explique comment la mettre en place avec Cowork."
               featureColor={BLUE}
             />
 
@@ -916,7 +918,7 @@ export const LeclercCoworkFormation = ({
             <PromptExample
               feature="💡 Audit complet — Tout automatiser"
               context="Claude fait l'audit de tout ce qui peut etre automatise :"
-              prompt="Fais un audit complet de ce qu'un directeur de magasin E.Leclerc peut automatiser avec Cowork. Classe par categorie (Goodays, ventes, RH, planning, fournisseurs, communication). Pour chaque tache, donne le prompt exact a utiliser et dis-moi si ca peut etre programme automatiquement."
+              prompt="Fais un audit complet de ce qu'un directeur de magasin E.Leclerc peut automatiser avec Cowork. Classe par categorie (satisfaction client, ventes, RH, planning, fournisseurs, communication). Pour chaque tache, donne le prompt exact a utiliser et dis-moi si ca peut etre programme automatiquement."
               featureColor="#059669"
             />
           </Section>
@@ -970,9 +972,9 @@ export const LeclercCoworkFormation = ({
             />
 
             <PromptExample
-              feature="⚡ Skill — Reponses Goodays"
+              feature="⚡ Skill — Reponses avis clients"
               context="Traitement des avis clients en lot :"
-              prompt="Lis les 10 derniers avis Goodays non repondus. Redige une reponse personnalisee pour chacun, ton professionnel et empathique E.Leclerc. Classe par priorite (note < 3 en premier). Presente pour validation avant envoi."
+              prompt="Lis les 10 derniers avis clients non repondus. Redige une reponse personnalisee pour chacun, ton professionnel et empathique E.Leclerc. Classe par priorite (note < 3 en premier). Presente pour validation avant envoi."
               featureColor={ORANGE}
             />
 
@@ -1232,7 +1234,7 @@ export const LeclercCoworkFormation = ({
                     Tester 2-3 prompts de cet email
                   </Text>
                   <Text style={stepDesc}>
-                    Commencez par les reponses Goodays ou la synthese hebdo.
+                    Commencez par le Voice DNA ou la synthese hebdo.
                     Notez ce qui fonctionne et ce qui bloque.
                   </Text>
                 </Column>
