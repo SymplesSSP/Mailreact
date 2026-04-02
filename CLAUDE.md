@@ -25,8 +25,10 @@ npm run export    # Export emails to static HTML in out/
 - Templates use inline styles (email client compatibility), not CSS files
 - Brand colors are defined as constants at the top of each template (e.g., `LECLERC_BLUE`, `LECLERC_ORANGE`)
 - Props interfaces define customizable fields (e.g., `destinataire`, `magasin`)
-- Static assets referenced via `emails/static/` path
+- Static assets use absolute GitHub Pages URLs: `https://symplesssp.github.io/Mailreact/emails/static/`
+- In dev preview, GitHub Pages URLs won't render (use `npm run export` + open HTML to verify images)
 - Components like `VideoThumbnail`, `FeatureCard` are defined inline within the template file, not extracted to shared modules
+- Never set both `width` and `height` on `<Img>` — use `width` only to preserve aspect ratio
 
 ## Design Philosophy
 
@@ -35,3 +37,24 @@ npm run export    # Export emails to static HTML in out/
 - Each email should tell a story: context, what they'll learn, how it works, call to action
 - Optimize for readability on mobile (single column, large touch targets)
 - Compatible with major email clients (Gmail, Outlook, Apple Mail)
+
+## Image Hosting
+
+- Repo is **public** with GitHub Pages enabled (legacy deploy from main)
+- All email images served from `https://symplesssp.github.io/Mailreact/emails/static/`
+- Images deploy automatically on `git push origin main`
+- For antispam: GitHub Pages (github.io) > raw.githubusercontent > Google Drive
+
+## Infographic Generation (Gemini API)
+
+- Use `nano-banana-pro-preview` model for infographics (best text rendering)
+- API key stored in Claude memory (not in repo)
+- Prompt tips: use ICS framework (Image/Content/Style), put text in quotes for accuracy, request white background for email integration
+- Use PIL to add transparency: threshold 240+ on RGB channels
+- Optimize PNG with quantize(256 colors) to keep under 400KB
+
+## Testing Workflow
+
+- Test skill prompts live on claude.ai before including in email
+- Export with `npm run export`, open HTML in browser to verify images load from GitHub Pages
+- To send: open exported HTML in Chrome → Cmd+A → Cmd+C → paste in Gmail compose
