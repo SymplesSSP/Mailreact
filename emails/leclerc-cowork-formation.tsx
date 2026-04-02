@@ -196,11 +196,13 @@ const PromptExample = ({
   prompt,
   featureColor,
   context,
+  result,
 }: {
   feature: string;
   prompt: string;
   featureColor: string;
   context?: string;
+  result?: string;
 }) => (
   <Section style={{ marginBottom: '16px' }}>
     <Section
@@ -241,6 +243,19 @@ const PromptExample = ({
       >
         &ldquo;{prompt}&rdquo;
       </Text>
+      {result && (
+        <Text
+          style={{
+            fontSize: '12px',
+            color: '#059669',
+            margin: '10px 0 0 0',
+            lineHeight: '18px',
+            fontWeight: 600,
+          }}
+        >
+          → {result}
+        </Text>
+      )}
     </Section>
   </Section>
 );
@@ -769,6 +784,7 @@ export const LeclercCoworkFormation = ({
               feature="🧬 Voice DNA — Capturer votre ton via vos vrais emails"
               context="Joignez 5-10 emails ou reponses clients que VOUS avez rediges. Claude extrait votre ADN d'ecriture et cree un skill reutilisable a vie :"
               prompt="Voici des exemples de mes communications reelles [joindre fichiers]. Analyse en profondeur mon style : longueur de phrases, registre, formules recurrentes, niveau de formalite, structure de mes reponses, mots que j'utilise vs ceux que j'evite. Extrais un profil 'Voice DNA' detaille. Genere un SKILL.md 'Mon Ton Leclerc' qui force Claude a ecrire EXACTEMENT comme moi — reponses clients, emails internes, notes de service. Le skill doit inclure : 10 regles d'ecriture extraites de mes exemples, 5 formules interdites (ton generique IA), et un test de validation avec 3 exemples entree/sortie. Ensuite programme avec /schedule une tache quotidienne a 8h : Claude lit les nouveaux avis clients sur Drive, redige les reponses avec mon ton, et les presente pour validation."
+              result="Claude produit : un profil Voice DNA (2 registres detectes : client formel vs interne direct), un SKILL.md installable en 1 clic avec 10 regles, 5 formules interdites, checklist de validation, et exemples entree/sortie."
               featureColor={ORANGE}
             />
 
@@ -776,6 +792,7 @@ export const LeclercCoworkFormation = ({
               feature="📊 Analyseur decisonnel — Business Case automatique"
               context="Joignez un devis fournisseur, une proposition ou un projet. Claude produit le business case complet et cree le skill pour automatiser toutes les futures analyses :"
               prompt="Voici [joindre : devis, proposition, projet d'investissement]. Analyse ce document et produis un business case : 1) Resume executif 3 lignes, 2) Couts directs + couts caches detectes, 3) Benefices en 3 scenarios (conservateur/attendu/optimiste), 4) ROI et delai de rentabilite, 5) Risques avec probabilite, 6) Recommandation Go/No-Go. Genere ensuite un SKILL.md 'Analyse Decision Leclerc' qui automatise cette methode pour tout futur document. Le skill doit : extraire les chiffres cles automatiquement, comparer avec les seuils du magasin, et produire un PDF via la skill integree. Bonus : ajoute une instruction pour que Claude aille chercher sur Google Drive les donnees de reference (CA, marges par rayon) via le connecteur, afin de contextualiser chaque analyse."
+              result="Claude produit : un PDF telechargeable avec le business case complet (resume, couts, 3 scenarios, ROI, risques, recommandation Go/No-Go), puis un SKILL.md pour automatiser l'analyse de tout futur devis."
               featureColor={ORANGE}
             />
 
@@ -783,6 +800,7 @@ export const LeclercCoworkFormation = ({
               feature="🔍 Audit eclair — Scan de donnees + plan d'action"
               context="Deposez vos exports (ventes, stock, RH, satisfaction client) sur Google Drive. Claude s'y connecte, scanne tout, et produit un diagnostic actionnable :"
               prompt="Connecte-toi a mon Google Drive (dossier 'Donnees Magasin'). Scanne tous les fichiers presents : exports ventes, stock, planning RH, avis clients. Pour chaque source, identifie : 1) Les 5 signaux forts (tendances, anomalies, patterns), 2) Les 3 risques imminents avec deadline, 3) Les 3 quick wins actionnables cette semaine. Croise les donnees entre sources (ex: correlation entre satisfaction client et jours de sous-effectif). Produis un rapport PDF d'une page avec le plan d'action 30 jours. Genere un SKILL.md 'Audit Eclair Leclerc' qui reproduit cette analyse chaque semaine. Enfin, programme avec /schedule un audit automatique chaque lundi a 6h — le rapport est pret dans Drive quand j'arrive."
+              result="Claude produit : un dashboard visuel avec KPIs (CA, panier moyen, frequentation), tableau des ruptures avec badges couleur, 5 signaux croises entre sources, 3 risques avec deadlines, plan d'action 30 jours, et un SKILL.md pour automatiser l'audit chaque semaine."
               featureColor={ORANGE}
             />
 
@@ -790,6 +808,7 @@ export const LeclercCoworkFormation = ({
               feature="🎯 Meta-skill — Claude scanne votre quotidien et cree LE skill #1"
               context="Donnez a Claude l'acces a votre Drive et vos apps. Il observe, mesure, et construit l'automatisation a plus fort impact :"
               prompt="Connecte-toi a mon Google Drive. Identifie les 20 fichiers que j'ai le plus modifies ce mois-ci. Pour chacun, estime : temps manuel, frequence, potentiel d'automatisation. Classe par impact (temps x frequence). Pour le #1 — la tache qui me coute le plus — genere un SKILL.md complet et pret a installer, avec : frontmatter YAML, description de declenchement precise, instructions pas a pas, exemples entree/sortie, gestion des cas limites. Le skill doit exploiter les outils Cowork disponibles : connecteur Drive pour lire/ecrire les fichiers, Computer Use si besoin d'interagir avec un logiciel sans connecteur, /schedule pour automatiser l'execution. Explique pourquoi CE skill est le plus rentable et combien de temps il me fait gagner par semaine."
+              result="Claude produit : un classement de vos 20 fichiers les plus utilises par impact, l'estimation du temps economise, et LE SKILL.md #1 complet pret a installer — avec frontmatter YAML, instructions, exemples, et recommandation d'automatisation via /schedule."
               featureColor={BLUE}
             />
           </Section>
