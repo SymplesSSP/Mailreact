@@ -346,16 +346,15 @@ export const LeclercCoworkFormation = ({
               style={{
                 backgroundColor: '#ffffff',
                 borderRadius: '12px',
-                width: '160px',
+                width: '180px',
                 margin: '0 auto 20px auto',
-                padding: '8px 16px',
+                padding: '12px 16px',
                 textAlign: 'center' as const,
               }}
             >
               <Img
                 src="static/leclerc-logo.png"
-                width="130"
-                height="130"
+                width="150"
                 alt="E.Leclerc"
                 style={{ display: 'block', margin: '0 auto' }}
               />
