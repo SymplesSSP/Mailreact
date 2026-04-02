@@ -351,7 +351,7 @@ export const LeclercCoworkFormation = ({
 
           {/* ════════════════ HEADER ════════════════ */}
           <Img
-            src="static/banner-hero.png"
+            src="https://symplesssp.github.io/Mailreact/emails/static/banner-hero.png"
             width="600"
             alt="IA et productivite"
             style={{ width: '100%', display: 'block' }}
@@ -368,7 +368,7 @@ export const LeclercCoworkFormation = ({
               }}
             >
               <Img
-                src="static/leclerc-logo.png"
+                src="https://symplesssp.github.io/Mailreact/emails/static/leclerc-logo.png"
                 width="150"
                 alt="E.Leclerc"
                 style={{ display: 'block', margin: '0 auto' }}
@@ -845,7 +845,7 @@ export const LeclercCoworkFormation = ({
           {/* ════════════════ SKILL + TACHES PROGRAMMEES ════════════════ */}
           <Section style={content}>
             <Img
-              src="static/infographic-automation-cycle.png"
+              src="https://symplesssp.github.io/Mailreact/emails/static/infographic-automation-cycle.png"
               width="400"
               alt="Cycle automatisation : Skill + Programmation + Resultats"
               style={{ width: '75%', display: 'block', margin: '0 auto 16px auto' }}
@@ -919,7 +919,7 @@ export const LeclercCoworkFormation = ({
           {/* ════════════════ PROMPTS EXPLORATOIRES ════════════════ */}
           <Section style={content}>
             <Img
-              src="static/illustration-discovery.png"
+              src="https://symplesssp.github.io/Mailreact/emails/static/illustration-discovery.png"
               width="300"
               alt="Decouverte et exploration"
               style={{ width: '50%', display: 'block', margin: '0 auto 12px auto' }}
@@ -1059,7 +1059,7 @@ export const LeclercCoworkFormation = ({
 
             {/* Infographic */}
             <Img
-              src="static/infographic-tse-drive-claude.png"
+              src="https://symplesssp.github.io/Mailreact/emails/static/infographic-tse-drive-claude.png"
               width="536"
               alt="Process documentaire : poste de travail, Google Drive, Claude"
               style={{
