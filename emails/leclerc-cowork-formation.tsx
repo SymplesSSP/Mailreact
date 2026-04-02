@@ -845,11 +845,14 @@ export const LeclercCoworkFormation = ({
           {/* ════════════════ SKILL + TACHES PROGRAMMEES ════════════════ */}
           <Section style={content}>
             <Img
-              src="https://symplesssp.github.io/Mailreact/emails/static/infographic-skill-automation.png"
+              src="https://symplesssp.github.io/Mailreact/emails/static/infographic-skill-automation-v3.png"
               width="400"
-              alt="Cycle automatisation : Skill + Programmation + Resultats"
-              style={{ width: '75%', display: 'block', margin: '0 auto 16px auto' }}
+              alt="Du Skill a l'Automatisation Totale — 4 etapes : Creer, Connecter, Programmer, Automatise"
+              style={{ width: '80%', display: 'block', margin: '0 auto 4px auto' }}
             />
+            <Text style={{ fontSize: '11px', color: T3, textAlign: 'center' as const, margin: '0 0 20px 0', fontStyle: 'italic' }}>
+              Infographie generee avec Gemini (Nano Banana Pro)
+            </Text>
             <Heading as="h2" style={sectionTitle}>
               Skill + Tache Programmee = Automatisation totale
             </Heading>
@@ -858,6 +861,13 @@ export const LeclercCoworkFormation = ({
               Une <strong>tache programmee</strong> lui dit QUAND la faire.
               Combinez les deux et Claude travaille pour vous en permanence
               — sans aucune intervention.
+            </Text>
+            <Text style={paragraph}>
+              <strong>Concretement, voici comment faire :</strong> ouvrez Claude Desktop,
+              collez un des prompts de la section precedente (ex: Voice DNA ou Audit Eclair).
+              Claude genere le skill. Cliquez &ldquo;Enregistrer la competence&rdquo;.
+              Puis tapez <strong>/schedule</strong> et decrivez quand l'executer
+              (ex: &ldquo;chaque lundi a 7h&rdquo;). C'est tout — 3 minutes, zero code.
             </Text>
 
             {/* Exemples concrets */}
