@@ -611,6 +611,217 @@ export const KlatovskyFormationIA = ({
 
           <Hr style={divider} />
 
+          {/* ════════════════ CLAUDE CODE ════════════════ */}
+          <Section style={content}>
+            <Img
+              src="https://symplesssp.github.io/Mailreact/emails/static/infographic-claude-code-legal.png"
+              width="536"
+              alt="Claude Code pour les Avocats : 4 etapes — Deposez, Analysez, Outils, Automatisation"
+              style={{ width: '100%', display: 'block', margin: '0 auto 4px auto', borderRadius: '8px' }}
+            />
+            <Text style={{ fontSize: '11px', color: T3, textAlign: 'center' as const, margin: '0 0 20px 0', fontStyle: 'italic' }}>
+              Infographie : Claude Code en 4 etapes pour les avocats
+            </Text>
+
+            <Section
+              style={{
+                backgroundColor: BLUE,
+                borderRadius: '12px',
+                padding: '20px 24px',
+                marginBottom: '24px',
+              }}
+            >
+              <Heading
+                as="h2"
+                style={{ fontSize: '20px', color: '#ffffff', margin: '0 0 4px 0' }}
+              >
+                Claude Code — Votre analyste documentaire
+              </Heading>
+              <Text style={{ fontSize: '14px', color: '#E8DCC8', margin: '0' }}>
+                Deposez vos documents, Claude les analyse et cree des outils pour vous
+              </Text>
+            </Section>
+
+            <Text style={paragraph}>
+              <strong>Claude Code</strong> est un outil d'Anthropic qui va plus loin
+              que la simple conversation. Vous lui donnez vos documents — contrats
+              de travail, conclusions adverses, pieces d'un dossier — et il les
+              analyse en profondeur, puis cree des outils sur mesure pour votre cabinet.
+            </Text>
+
+            <Text style={paragraph}>
+              <strong>Pas besoin de savoir coder.</strong> Vous decrivez ce que vous
+              voulez en francais, Claude Code fait le reste : il lit vos fichiers, les
+              traite, et produit le resultat (memo, tableau, calculateur).
+            </Text>
+
+            {/* Ce que Claude Code sait faire */}
+            <Heading as="h3" style={{ fontSize: '16px', fontWeight: 700, color: T1, margin: '20px 0 12px 0' }}>
+              Ce que Claude Code fait pour un avocat
+            </Heading>
+
+            <Section style={stepBox}>
+              <Row>
+                <Column style={stepNum}>
+                  <Text style={stepCircle}>1</Text>
+                </Column>
+                <Column style={stepBody}>
+                  <Text style={stepTitle}>Analyser des centaines de pages d'un coup</Text>
+                  <Text style={stepDesc}>
+                    Deposez un dossier entier (contrat + annexes + pieces adverses).
+                    Claude Code lit tout, identifie les points critiques, et produit
+                    un memo synthetique avec les irregularites par clause.
+                  </Text>
+                </Column>
+              </Row>
+            </Section>
+
+            <Section style={stepBox}>
+              <Row>
+                <Column style={stepNum}>
+                  <Text style={{ ...stepCircle, backgroundColor: BLUE }}>2</Text>
+                </Column>
+                <Column style={stepBody}>
+                  <Text style={stepTitle}>Creer des calculateurs sur mesure</Text>
+                  <Text style={stepDesc}>
+                    Demandez un calculateur d'indemnites de licenciement integrant
+                    le bareme Macron, la convention collective et l'anciennete.
+                    Claude Code genere une page interactive que vous utilisez
+                    directement dans votre navigateur.
+                  </Text>
+                </Column>
+              </Row>
+            </Section>
+
+            <Section style={stepBox}>
+              <Row>
+                <Column style={stepNum}>
+                  <Text style={stepCircle}>3</Text>
+                </Column>
+                <Column style={stepBody}>
+                  <Text style={stepTitle}>Comparer des documents automatiquement</Text>
+                  <Text style={stepDesc}>
+                    Deux versions d'un contrat ? Des conclusions et des pieces
+                    contradictoires ? Claude Code compare, identifie les
+                    differences et les incoherences, et produit un rapport
+                    structure.
+                  </Text>
+                </Column>
+              </Row>
+            </Section>
+
+            <Section style={stepBox}>
+              <Row>
+                <Column style={stepNum}>
+                  <Text style={{ ...stepCircle, backgroundColor: BLUE }}>4</Text>
+                </Column>
+                <Column style={stepBody}>
+                  <Text style={stepTitle}>Automatiser les taches repetitives</Text>
+                  <Text style={stepDesc}>
+                    Traitement par lots : analysez 50 contrats avec les memes
+                    criteres, generez un rapport pour chacun. Claude Code
+                    travaille pendant que vous faites autre chose.
+                  </Text>
+                </Column>
+              </Row>
+            </Section>
+
+            {/* Prompts concrets Claude Code */}
+            <Heading as="h3" style={{ fontSize: '16px', fontWeight: 700, color: T1, margin: '20px 0 12px 0' }}>
+              Prompts prets a copier — donnez vos documents a Claude Code
+            </Heading>
+            <Text style={{ fontSize: '13px', color: T3, margin: '0 0 16px 0', lineHeight: '20px' }}>
+              Ouvrez Claude Code, collez un de ces prompts, et joignez vos fichiers. Claude fait le reste.
+            </Text>
+
+            <PromptExample
+              feature="Audit complet d'un dossier"
+              context="Deposez toutes les pieces d'un dossier contentieux :"
+              prompt="Voici le dossier complet [joindre fichiers : contrat, lettre de licenciement, bulletins, attestations, pieces adverses]. Analyse chaque document. Produis : 1) Un resume executif du dossier en 10 lignes, 2) Les forces et faiblesses de notre position, 3) Les irregularites dans la procedure de licenciement, 4) Les pieces manquantes que je devrais reclamer, 5) Un tableau des indemnites estimees (3 scenarios). Tout doit etre dans un memo structure que je peux imprimer."
+              result="Claude Code produit un memo PDF complet : resume, analyse clause par clause, tableau d'indemnites, et liste des pieces a reclamer."
+              featureColor={BLUE}
+            />
+
+            <PromptExample
+              feature="Calculateur d'indemnites interactif"
+              context="Claude Code cree un outil de calcul personnalise :"
+              prompt="Cree un calculateur d'indemnites de licenciement en HTML interactif. Il doit prendre en entree : salaire brut mensuel, anciennete, age, convention collective (IDCC). Il doit calculer : indemnite legale, indemnite conventionnelle (si plus favorable), indemnite de preavis, conges payes sur preavis, et fourchette du bareme Macron. Affiche les 3 scenarios (minimum, median, maximum) dans un tableau clair. Ajoute un bouton pour imprimer."
+              result="Claude Code genere une page HTML interactive : saisissez les donnees du salarie, les indemnites s'affichent instantanement avec les 3 scenarios."
+              featureColor={ORANGE}
+            />
+
+            <PromptExample
+              feature="Comparaison de deux contrats"
+              context="Identifiez les differences entre deux versions d'un document :"
+              prompt="Voici deux versions d'un contrat de travail [joindre les 2 fichiers]. Compare clause par clause. Pour chaque difference, indique : la clause concernee, ce qui a change, si le changement est favorable ou defavorable au salarie, et le risque juridique associe. Produis un tableau comparatif que je peux joindre au dossier."
+              result="Claude Code produit un tableau comparatif clause par clause avec code couleur : vert (favorable), rouge (defavorable), orange (a verifier)."
+              featureColor={BLUE}
+            />
+
+            <PromptExample
+              feature="Synthese de jurisprudence sur un theme"
+              context="Claude Code recherche et synthetise la jurisprudence :"
+              prompt="Recherche les 10 derniers arrets de la Cour de cassation chambre sociale sur le forfait jours (convention de forfait, depassement, nullite). Pour chaque arret : date, numero de pourvoi, faits cles en 3 lignes, solution de la Cour, portee pratique. Classe du plus recent au plus ancien. Termine par une synthese de la tendance jurisprudentielle actuelle."
+              result="Claude Code produit une fiche de jurisprudence structuree : 10 arrets resumes, tendance identifiee, et recommandations pratiques."
+              featureColor={ORANGE}
+            />
+
+            {/* Comment y acceder */}
+            <Section
+              style={{
+                backgroundColor: BLUE_LIGHT,
+                borderRadius: '12px',
+                padding: '16px 20px',
+                marginTop: '16px',
+                borderLeft: `4px solid ${BLUE}`,
+              }}
+            >
+              <Text style={{ fontSize: '14px', fontWeight: 700, color: BLUE, margin: '0 0 10px 0' }}>
+                Comment utiliser Claude Code ?
+              </Text>
+              <Text style={{ fontSize: '13px', color: T2, margin: '0 0 8px 0', lineHeight: '20px' }}>
+                <strong>Sur le web</strong> — Rendez-vous sur{' '}
+                <Link href="https://claude.ai/code" style={{ color: BLUE, textDecoration: 'underline' }}>
+                  claude.ai/code
+                </Link>
+                {' '}(rien a installer, ca marche dans votre navigateur).
+              </Text>
+              <Text style={{ fontSize: '13px', color: T2, margin: '0 0 8px 0', lineHeight: '20px' }}>
+                <strong>Sur votre Mac ou PC</strong> — Telechargez l'application{' '}
+                <Link href="https://claude.com/download" style={{ color: BLUE, textDecoration: 'underline' }}>
+                  Claude Desktop
+                </Link>
+                {' '}et cliquez sur l'onglet &ldquo;Code&rdquo;.
+              </Text>
+              <Text style={{ fontSize: '13px', color: T2, margin: '0', lineHeight: '20px' }}>
+                <strong>Abonnement</strong> — Necessite un abonnement Claude Pro ou Max
+                (le meme que celui que vous utilisez deja).
+              </Text>
+            </Section>
+
+            {/* Lien doc officielle */}
+            <Section style={{ marginTop: '16px' }}>
+              <Text style={{ fontSize: '13px', color: T3, margin: '0', lineHeight: '20px' }}>
+                Documentation officielle :{' '}
+                <Link
+                  href="https://code.claude.com/docs/en/overview"
+                  style={{ color: BLUE, textDecoration: 'underline' }}
+                >
+                  code.claude.com/docs
+                </Link>
+                {' '}|{' '}
+                <Link
+                  href="https://platform.claude.com/docs/fr/about-claude/use-case-guides/legal-summarization"
+                  style={{ color: BLUE, textDecoration: 'underline' }}
+                >
+                  Guide resume juridique (Anthropic)
+                </Link>
+              </Text>
+            </Section>
+          </Section>
+
+          <Hr style={divider} />
+
           {/* ════════════════ FOCUS SKILLS ════════════════ */}
           <Section style={content}>
             <Section
