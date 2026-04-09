@@ -703,116 +703,387 @@ export const KlatovskyFormationIA = ({
               </Text>
             </Section>
 
-            {/* La methode */}
-            <Heading as="h3" style={{ fontSize: '16px', fontWeight: 700, color: T1, margin: '20px 0 12px 0' }}>
-              La methode : 4 etapes, zero competence technique
-            </Heading>
+            {/* ── PROCESS PAS A PAS ── */}
+            <Section
+              style={{
+                backgroundColor: BLUE,
+                borderRadius: '12px',
+                padding: '20px 24px',
+                marginBottom: '24px',
+              }}
+            >
+              <Heading
+                as="h3"
+                style={{ fontSize: '18px', color: '#ffffff', margin: '0 0 4px 0' }}
+              >
+                Process pas a pas — suivez la recette
+              </Heading>
+              <Text style={{ fontSize: '13px', color: '#E8DCC8', margin: '0' }}>
+                Methode basee sur les bonnes pratiques du Vibe Coding
+                ({' '}
+                <Link href="https://cloud.google.com/discover/what-is-vibe-coding" style={{ color: ORANGE, textDecoration: 'underline' }}>
+                  Google Cloud
+                </Link>
+                {', '}
+                <Link href="https://www.softr.io/blog/vibe-coding-best-practices" style={{ color: ORANGE, textDecoration: 'underline' }}>
+                  Softr
+                </Link>
+                {', '}
+                <Link href="https://www.freecodecamp.org/news/claude-code-handbook/" style={{ color: ORANGE, textDecoration: 'underline' }}>
+                  FreeCodeCamp
+                </Link>
+                {' '})
+              </Text>
+            </Section>
 
+            {/* 5 regles d'or */}
+            <Section
+              style={{
+                backgroundColor: ORANGE_LIGHT,
+                borderRadius: '12px',
+                padding: '16px 20px',
+                marginBottom: '24px',
+                borderLeft: `4px solid ${ORANGE}`,
+              }}
+            >
+              <Text style={{ fontSize: '14px', fontWeight: 700, color: ORANGE, margin: '0 0 10px 0' }}>
+                5 regles d'or (a lire avant de commencer)
+              </Text>
+              <Text style={{ fontSize: '13px', color: T2, margin: '0 0 6px 0', lineHeight: '20px' }}>
+                <strong>1. Un besoin = un projet.</strong>{' '}
+                Ne melangez pas tout dans un seul prompt. Un outil de contrats, un calculateur d'indemnites = deux projets separes.
+              </Text>
+              <Text style={{ fontSize: '13px', color: T2, margin: '0 0 6px 0', lineHeight: '20px' }}>
+                <strong>2. Decrivez le QUOI, pas le COMMENT.</strong>{' '}
+                Dites &ldquo;je veux un calculateur d'indemnites&rdquo;, pas &ldquo;cree un fichier HTML avec du JavaScript&rdquo;. Claude sait comment faire.
+              </Text>
+              <Text style={{ fontSize: '13px', color: T2, margin: '0 0 6px 0', lineHeight: '20px' }}>
+                <strong>3. Avancez par etapes.</strong>{' '}
+                D'abord le formulaire de base. Testez. Puis ajoutez les calculs. Testez. Puis les options avancees. Pas tout d'un coup.
+              </Text>
+              <Text style={{ fontSize: '13px', color: T2, margin: '0 0 6px 0', lineHeight: '20px' }}>
+                <strong>4. Testez apres chaque modification.</strong>{' '}
+                Quand Claude dit &ldquo;c'est fait&rdquo;, ouvrez l'application et verifiez. Si ca ne marche pas, decrivez le probleme.
+              </Text>
+              <Text style={{ fontSize: '13px', color: T2, margin: '0', lineHeight: '20px' }}>
+                <strong>5. Gardez vos documents de reference dans le dossier.</strong>{' '}
+                Contrat-type, grille CCN, modele de courrier — Claude Code s'en sert pour construire l'application conforme.
+              </Text>
+            </Section>
+
+            {/* Etape 1 */}
             <Section style={stepBox}>
               <Row>
                 <Column style={stepNum}>
                   <Text style={stepCircle}>1</Text>
                 </Column>
                 <Column style={stepBody}>
-                  <Text style={stepTitle}>Decrivez votre besoin</Text>
+                  <Text style={stepTitle}>Preparez un dossier sur votre Bureau</Text>
                   <Text style={stepDesc}>
-                    En langage naturel, expliquez a Claude Code ce que vous voulez.
-                    Exemple : &ldquo;Je veux une application pour generer des contrats
-                    de travail conformes a la CCN 2216.&rdquo;
+                    Creez un dossier sur votre Bureau (ex : &ldquo;Mon App Contrats&rdquo;).
+                    Placez-y vos documents de reference : contrat-type Word,
+                    grille de la convention collective en PDF, modeles existants.
+                    Claude Code travaillera avec ces fichiers.
                   </Text>
                 </Column>
               </Row>
             </Section>
 
+            {/* Etape 2 */}
             <Section style={stepBox}>
               <Row>
                 <Column style={stepNum}>
                   <Text style={{ ...stepCircle, backgroundColor: BLUE }}>2</Text>
                 </Column>
                 <Column style={stepBody}>
-                  <Text style={stepTitle}>Claude Code construit l'application</Text>
+                  <Text style={stepTitle}>Ouvrez Claude Desktop → onglet &ldquo;Code&rdquo;</Text>
                   <Text style={stepDesc}>
-                    Claude Code cree les fichiers, le formulaire, la base de donnees,
-                    la logique metier. Vous n'ecrivez aucune ligne de code —
-                    il fait tout.
+                    Lancez l'application{' '}
+                    <Link href="https://claude.com/download" style={{ color: BLUE, textDecoration: 'underline' }}>
+                      Claude Desktop
+                    </Link>
+                    {' '}sur votre Mac ou PC.
+                    En bas a gauche, cliquez sur l'onglet <strong>&ldquo;Code&rdquo;</strong>.
+                    Selectionnez le dossier que vous venez de creer.
                   </Text>
                 </Column>
               </Row>
             </Section>
 
+            {/* Etape 3 */}
             <Section style={stepBox}>
               <Row>
                 <Column style={stepNum}>
                   <Text style={stepCircle}>3</Text>
                 </Column>
                 <Column style={stepBody}>
-                  <Text style={stepTitle}>Testez et ajustez en dialoguant</Text>
+                  <Text style={stepTitle}>Copiez-collez UN des prompts ci-dessous</Text>
                   <Text style={stepDesc}>
-                    Vous testez l'application. Si quelque chose ne va pas,
-                    dites-le : &ldquo;Ajoute un champ pour la periode d'essai&rdquo;
-                    ou &ldquo;Change le calcul de l'anciennete&rdquo;.
-                    Claude Code corrige instantanement.
+                    Choisissez le prompt qui correspond a votre besoin.
+                    Copiez-le tel quel dans la zone de texte de Claude Code.
+                    Appuyez sur Entree. Claude commence a construire.
                   </Text>
                 </Column>
               </Row>
             </Section>
 
+            {/* Etape 4 */}
             <Section style={stepBox}>
               <Row>
                 <Column style={stepNum}>
                   <Text style={{ ...stepCircle, backgroundColor: BLUE }}>4</Text>
                 </Column>
                 <Column style={stepBody}>
-                  <Text style={stepTitle}>Application fonctionnelle, prete a l'emploi</Text>
+                  <Text style={stepTitle}>Claude construit — vous regardez</Text>
                   <Text style={stepDesc}>
-                    L'application tourne sur votre ordinateur. Vous l'utilisez
-                    au quotidien pour generer des contrats, calculer des indemnites,
-                    ou gerer vos dossiers.
+                    Claude Code cree les fichiers un par un. Vous voyez tout
+                    se construire en temps reel. Laissez-le finir —
+                    ca prend 2 a 5 minutes selon la complexite.
+                    Il vous demande parfois de valider : dites &ldquo;oui&rdquo;.
                   </Text>
                 </Column>
               </Row>
             </Section>
 
-            {/* Prompts concrets */}
-            <Heading as="h3" style={{ fontSize: '16px', fontWeight: 700, color: T1, margin: '20px 0 12px 0' }}>
-              Prompts a copier dans Claude Desktop (onglet Code)
-            </Heading>
-            <Text style={{ fontSize: '13px', color: T3, margin: '0 0 16px 0', lineHeight: '20px' }}>
-              Ouvrez Claude Desktop, cliquez sur l'onglet &ldquo;Code&rdquo;, et collez un de ces prompts.
-              Placez vos documents dans un dossier sur votre Bureau avant de commencer.
+            {/* Etape 5 */}
+            <Section style={stepBox}>
+              <Row>
+                <Column style={stepNum}>
+                  <Text style={stepCircle}>5</Text>
+                </Column>
+                <Column style={stepBody}>
+                  <Text style={stepTitle}>Testez et ajustez en francais</Text>
+                  <Text style={stepDesc}>
+                    Claude Code lance l'application dans votre navigateur.
+                    Testez-la. Si quelque chose ne va pas, dites-le simplement :
+                  </Text>
+                </Column>
+              </Row>
+            </Section>
+
+            {/* Exemples de corrections */}
+            <Section
+              style={{
+                backgroundColor: BG,
+                borderRadius: '8px',
+                padding: '14px 18px',
+                marginBottom: '16px',
+                marginLeft: '52px',
+                border: `1px solid ${BD}`,
+              }}
+            >
+              <Text style={{ fontSize: '13px', color: T1, margin: '0 0 6px 0', lineHeight: '20px', fontStyle: 'italic' }}>
+                &ldquo;Ajoute un champ pour la periode d'essai&rdquo;
+              </Text>
+              <Text style={{ fontSize: '13px', color: T1, margin: '0 0 6px 0', lineHeight: '20px', fontStyle: 'italic' }}>
+                &ldquo;Le calcul de l'anciennete est faux, il doit compter en mois&rdquo;
+              </Text>
+              <Text style={{ fontSize: '13px', color: T1, margin: '0 0 6px 0', lineHeight: '20px', fontStyle: 'italic' }}>
+                &ldquo;Ajoute un bouton pour imprimer le contrat&rdquo;
+              </Text>
+              <Text style={{ fontSize: '13px', color: T1, margin: '0', lineHeight: '20px', fontStyle: 'italic' }}>
+                &ldquo;Change les couleurs, je veux du bleu marine&rdquo;
+              </Text>
+            </Section>
+
+            {/* Etape 6 */}
+            <Section style={stepBox}>
+              <Row>
+                <Column style={stepNum}>
+                  <Text style={{ ...stepCircle, backgroundColor: BLUE }}>6</Text>
+                </Column>
+                <Column style={stepBody}>
+                  <Text style={stepTitle}>C'est pret — vous l'utilisez au quotidien</Text>
+                  <Text style={stepDesc}>
+                    L'application est dans votre dossier. Pour la relancer,
+                    double-cliquez sur le fichier &ldquo;lancer&rdquo; que Claude a cree.
+                    Elle s'ouvre dans votre navigateur, prete a l'emploi.
+                  </Text>
+                </Column>
+              </Row>
+            </Section>
+
+            <Hr style={{ borderColor: BD, margin: '24px 0' }} />
+
+            {/* ── PROMPTS PRETS A COPIER ── */}
+            <Section
+              style={{
+                backgroundColor: ORANGE,
+                borderRadius: '12px',
+                padding: '20px 24px',
+                marginBottom: '24px',
+              }}
+            >
+              <Heading
+                as="h3"
+                style={{ fontSize: '18px', color: '#ffffff', margin: '0 0 4px 0' }}
+              >
+                4 prompts prets a copier-coller
+              </Heading>
+              <Text style={{ fontSize: '13px', color: '#E8DCC8', margin: '0' }}>
+                Choisissez celui qui correspond a votre besoin. Copiez-le tel quel a l'etape 3.
+              </Text>
+            </Section>
+
+            <PromptExample
+              feature="Prompt 1 — Generateur de contrats de travail"
+              context="Vous voulez generer des contrats conformes a votre convention collective :"
+              prompt="Cree une application pour generer des contrats de travail. L'application doit avoir : un formulaire avec les informations du salarie (nom, prenom, poste, salaire brut mensuel, date d'embauche, type de contrat CDI ou CDD avec date de fin), une liste des employeurs enregistres, la grille de la convention collective IDCC 2216 avec les niveaux et echelons, et la generation automatique du contrat au format Word. Ajoute un historique de tous les contrats generes. Cree aussi un fichier 'lancer' pour que je puisse demarrer l'application en double-cliquant dessus."
+              result="Claude Code cree l'application complete. Double-cliquez sur 'lancer', remplissez le formulaire, le contrat Word se genere automatiquement."
+              featureColor={ORANGE}
+            />
+
+            <PromptExample
+              feature="Prompt 2 — Calculateur d'indemnites de licenciement"
+              context="Vous voulez un outil de calcul pour vos dossiers prud'homaux :"
+              prompt="Cree un calculateur d'indemnites de licenciement en HTML que j'ouvre dans mon navigateur. Champs a remplir : salaire brut mensuel, anciennete en annees et mois, age du salarie, convention collective (numero IDCC). Le calculateur doit afficher : indemnite legale de licenciement (article L1234-9), indemnite conventionnelle si elle est plus favorable, indemnite compensatrice de preavis, conges payes sur preavis, et la fourchette du bareme Macron (plancher et plafond selon l'anciennete). Affiche 3 scenarios dans un tableau : favorable, median, defavorable. Ajoute un bouton 'Imprimer' pour sortir le resultat en PDF."
+              result="Claude Code genere un fichier HTML. Ouvrez-le dans Chrome ou Safari, saisissez les donnees du salarie, les montants s'affichent instantanement."
+              featureColor={BLUE}
+            />
+
+            <PromptExample
+              feature="Prompt 3 — Audit d'un contrat de travail"
+              context="Placez le contrat PDF dans votre dossier, puis copiez ce prompt :"
+              prompt="Lis le fichier contrat.pdf qui se trouve dans ce dossier. Analyse chaque clause du contrat et produis un rapport d'audit au format Word avec : 1) Conformite au Code du travail pour chaque clause, 2) Conformite a la convention collective applicable, 3) Analyse de la clause de non-concurrence (validite, contrepartie financiere, duree, perimetre geographique), 4) Analyse du forfait jours si present (respect article L3121-58, suivi de la charge de travail), 5) Verification de la periode d'essai (duree, renouvellement, conformite CCN). Pour chaque point, indique 'Conforme' ou 'Non conforme' avec l'article de loi concerne. Termine par un score de risque global sur 10."
+              result="Claude Code lit le PDF, produit un rapport Word clause par clause avec les articles de loi et un score de risque global."
+              featureColor={ORANGE}
+            />
+
+            <PromptExample
+              feature="Prompt 4 — Tableau de bord des dossiers du cabinet"
+              context="Vous voulez un outil de pilotage pour suivre vos affaires en cours :"
+              prompt="Cree une application de suivi des dossiers contentieux du cabinet. Pour chaque dossier je veux saisir : reference interne, nom du client, nom de l'adversaire, juridiction (CPH, Cour d'appel, Cassation), date de la prochaine audience, statut (en attente, en cours, audience programmee, decision rendue, cloture). L'application doit afficher : un tableau de bord avec les audiences des 30 prochains jours en rouge, les echeances de cette semaine en orange, un compteur de dossiers par statut, et un moteur de recherche par nom de client. Cree un fichier 'lancer' pour demarrer en double-cliquant."
+              result="Claude Code cree l'application de suivi avec tableau de bord visuel, alertes echeances, et recherche. Double-cliquez sur 'lancer' pour l'utiliser."
+              featureColor={BLUE}
+            />
+
+            {/* ── TEMPLATE GENERIQUE ── */}
+            <Section
+              style={{
+                backgroundColor: BLUE,
+                borderRadius: '12px',
+                padding: '20px 24px',
+                marginBottom: '20px',
+              }}
+            >
+              <Heading
+                as="h3"
+                style={{ fontSize: '18px', color: '#ffffff', margin: '0 0 4px 0' }}
+              >
+                Le prompt universel — adaptable a tout besoin
+              </Heading>
+              <Text style={{ fontSize: '13px', color: '#E8DCC8', margin: '0' }}>
+                Remplacez les mots entre crochets par votre besoin. Ce modele fonctionne pour tout.
+              </Text>
+            </Section>
+
+            <Section
+              style={{
+                backgroundColor: BG,
+                borderRadius: '12px',
+                padding: '20px',
+                border: `2px solid ${ORANGE}`,
+                marginBottom: '16px',
+              }}
+            >
+              <Text style={{ fontSize: '11px', fontWeight: 700, color: ORANGE, textTransform: 'uppercase' as const, letterSpacing: '0.5px', margin: '0 0 12px 0' }}>
+                Modele a copier et adapter
+              </Text>
+              <Text style={{ fontSize: '14px', color: '#334155', margin: '0', lineHeight: '24px', fontStyle: 'italic' }}>
+                &ldquo;Cree une application pour <strong>[VOTRE BESOIN]</strong>.
+                {'\n'}L'application doit permettre de : <strong>[ACTION 1]</strong>, <strong>[ACTION 2]</strong>, <strong>[ACTION 3]</strong>.
+                {'\n'}Les informations a saisir sont : <strong>[CHAMP 1, CHAMP 2, CHAMP 3]</strong>.
+                {'\n'}Le resultat doit etre au format <strong>[Word / PDF / HTML / tableau]</strong>.
+                {'\n'}Cree un fichier 'lancer' pour que je puisse demarrer l'application en double-cliquant dessus.&rdquo;
+              </Text>
+            </Section>
+
+            {/* Exemples d'adaptation */}
+            <Text style={{ fontSize: '14px', fontWeight: 700, color: T1, margin: '0 0 12px 0' }}>
+              Exemples — remplacez les crochets :
             </Text>
 
-            <PromptExample
-              feature="Application de generation de contrats"
-              context="Claude Code cree une application complete de A a Z :"
-              prompt="Cree une application pour generer des contrats de travail. L'application doit avoir : un formulaire avec les informations du salarie (nom, prenom, poste, salaire, date d'embauche, type de contrat CDI/CDD), une base de donnees des employeurs, la grille de la convention collective IDCC 2216 (niveaux et echelons), et la generation du contrat au format Word. Ajoute un historique des contrats generes."
-              result="Claude Code cree une application avec formulaire, base de donnees, grille CCN, et generation Word. Vous la lancez en double-cliquant sur un fichier."
-              featureColor={ORANGE}
-            />
+            <Section
+              style={{
+                backgroundColor: ORANGE_LIGHT,
+                borderRadius: '8px',
+                padding: '14px 18px',
+                marginBottom: '10px',
+              }}
+            >
+              <Text style={{ fontSize: '13px', color: T2, margin: '0', lineHeight: '20px' }}>
+                <strong style={{ color: ORANGE }}>Gestion des echeances</strong> :
+                &ldquo;Cree une application pour <strong>suivre les echeances procedurales du cabinet</strong>.
+                L'application doit permettre de : <strong>saisir une echeance avec date et dossier</strong>,
+                <strong>afficher les echeances des 7 prochains jours</strong>,
+                <strong>envoyer une alerte quand une echeance approche</strong>.
+                Les informations a saisir sont : <strong>dossier, type d'echeance, date limite, juridiction</strong>.
+                Le resultat doit etre au format <strong>tableau de bord avec code couleur</strong>.
+                Cree un fichier 'lancer' pour demarrer en double-cliquant.&rdquo;
+              </Text>
+            </Section>
 
-            <PromptExample
-              feature="Calculateur d'indemnites interactif"
-              context="Claude Code cree un outil de calcul personnalise :"
-              prompt="Cree un calculateur d'indemnites de licenciement en HTML. Champs : salaire brut mensuel, anciennete en annees, age du salarie, convention collective (IDCC). Calcule : indemnite legale de licenciement, indemnite conventionnelle si plus favorable, preavis, conges payes sur preavis, et fourchette du bareme Macron (plancher et plafond). Affiche les 3 scenarios (favorable, median, defavorable) dans un tableau. Ajoute un bouton imprimer."
-              result="Claude Code genere un fichier HTML que vous ouvrez dans votre navigateur. Saisissez les donnees, les indemnites s'affichent instantanement."
-              featureColor={BLUE}
-            />
+            <Section
+              style={{
+                backgroundColor: BLUE_LIGHT,
+                borderRadius: '8px',
+                padding: '14px 18px',
+                marginBottom: '10px',
+              }}
+            >
+              <Text style={{ fontSize: '13px', color: T2, margin: '0', lineHeight: '20px' }}>
+                <strong style={{ color: BLUE }}>Modeles de courriers</strong> :
+                &ldquo;Cree une application pour <strong>generer des courriers types du cabinet</strong>.
+                L'application doit permettre de : <strong>choisir un modele (mise en demeure, convocation, relance)</strong>,
+                <strong>remplir les informations variables (nom, date, montant)</strong>,
+                <strong>generer le courrier au format Word</strong>.
+                Les informations a saisir sont : <strong>destinataire, objet, reference dossier, montant</strong>.
+                Le resultat doit etre au format <strong>Word</strong>.
+                Cree un fichier 'lancer' pour demarrer en double-cliquant.&rdquo;
+              </Text>
+            </Section>
 
-            <PromptExample
-              feature="Outil d'audit de contrat de travail"
-              context="Placez le contrat PDF dans le dossier du projet, puis :"
-              prompt="Lis le fichier contrat-martin.pdf dans ce dossier. Analyse chaque clause et produis un rapport d'audit avec : 1) Conformite au Code du travail, 2) Conformite a la CCN applicable, 3) Clause de non-concurrence (validite, contrepartie), 4) Forfait jours (respect L3121-58), 5) Periode d'essai. Pour chaque point, indique conforme/non conforme avec l'article de loi. Genere le rapport dans un fichier Word."
-              result="Claude Code lit le PDF, analyse clause par clause, et genere un rapport Word structure avec les references legales."
-              featureColor={ORANGE}
-            />
+            <Section
+              style={{
+                backgroundColor: ORANGE_LIGHT,
+                borderRadius: '8px',
+                padding: '14px 18px',
+                marginBottom: '16px',
+              }}
+            >
+              <Text style={{ fontSize: '13px', color: T2, margin: '0', lineHeight: '20px' }}>
+                <strong style={{ color: ORANGE }}>Base client</strong> :
+                &ldquo;Cree une application pour <strong>gerer la fiche client du cabinet</strong>.
+                L'application doit permettre de : <strong>ajouter un client avec ses coordonnees</strong>,
+                <strong>lister les dossiers de chaque client</strong>,
+                <strong>rechercher un client par nom</strong>.
+                Les informations a saisir sont : <strong>nom, prenom, telephone, email, adresse, dossiers en cours</strong>.
+                Le resultat doit etre au format <strong>application web avec recherche</strong>.
+                Cree un fichier 'lancer' pour demarrer en double-cliquant.&rdquo;
+              </Text>
+            </Section>
 
-            <PromptExample
-              feature="Tableau de bord suivi des dossiers"
-              context="Claude Code cree un outil de pilotage pour le cabinet :"
-              prompt="Cree une application de suivi des dossiers contentieux. Pour chaque dossier : reference, nom du client, adversaire, juridiction (CPH, CA), prochaine echeance, statut (en cours, audience, cloture). Ajoute un tableau de bord avec les audiences des 30 prochains jours, les echeances critiques, et un compteur de dossiers par statut. Format : application web que je lance en local."
-              result="Claude Code cree une application de suivi complete avec tableau de bord, filtres, et alertes echeances."
-              featureColor={BLUE}
-            />
+            <Section
+              style={{
+                backgroundColor: BG,
+                borderRadius: '12px',
+                padding: '14px 18px',
+                borderLeft: `4px solid ${ORANGE}`,
+                marginBottom: '16px',
+              }}
+            >
+              <Text style={{ fontSize: '13px', color: T2, margin: '0', lineHeight: '20px' }}>
+                <strong style={{ color: ORANGE }}>Le principe</strong> : ce modele fonctionne pour tout.
+                Suivi des honoraires, gestion des pieces, registre des audiences,
+                calcul de delais de prescription, base de jurisprudence personnelle...
+                Decrivez le besoin, Claude Code construit l'outil.
+                C'est la methode &ldquo;Spec → Build → Test&rdquo; du{' '}
+                <Link href="https://cloud.google.com/discover/what-is-vibe-coding" style={{ color: ORANGE, textDecoration: 'underline' }}>
+                  Vibe Coding
+                </Link>
+                , adaptee au metier d'avocat.
+              </Text>
+            </Section>
 
             {/* Comment y acceder */}
             <Section
