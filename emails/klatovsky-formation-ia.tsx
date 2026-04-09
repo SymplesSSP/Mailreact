@@ -616,11 +616,11 @@ export const KlatovskyFormationIA = ({
             <Img
               src="https://symplesssp.github.io/Mailreact/emails/static/infographic-claude-code-legal.png"
               width="536"
-              alt="Claude Code pour les Avocats : 4 etapes — Deposez, Analysez, Outils, Automatisation"
+              alt="Vibe Coding : de l'idee a l'application en 4 etapes"
               style={{ width: '100%', display: 'block', margin: '0 auto 4px auto', borderRadius: '8px' }}
             />
             <Text style={{ fontSize: '11px', color: T3, textAlign: 'center' as const, margin: '0 0 20px 0', fontStyle: 'italic' }}>
-              Infographie : Claude Code en 4 etapes pour les avocats
+              Vibe Coding : decrivez votre besoin, Claude Code construit l'outil
             </Text>
 
             <Section
@@ -635,29 +635,77 @@ export const KlatovskyFormationIA = ({
                 as="h2"
                 style={{ fontSize: '20px', color: '#ffffff', margin: '0 0 4px 0' }}
               >
-                Claude Code — Votre analyste documentaire
+                Claude Code — Creez vos propres applications
               </Heading>
               <Text style={{ fontSize: '14px', color: '#E8DCC8', margin: '0' }}>
-                Deposez vos documents, Claude les analyse et cree des outils pour vous
+                Decrivez ce que vous voulez en francais, Claude Code le construit pour vous
               </Text>
             </Section>
 
             <Text style={paragraph}>
-              <strong>Claude Code</strong> est un outil d'Anthropic qui va plus loin
-              que la simple conversation. Vous lui donnez vos documents — contrats
-              de travail, conclusions adverses, pieces d'un dossier — et il les
-              analyse en profondeur, puis cree des outils sur mesure pour votre cabinet.
+              <strong>Claude Code</strong> est un outil d'Anthropic qui permet de
+              creer des applications fonctionnelles sans savoir coder.
+              Le principe est simple : vous decrivez votre besoin en francais,
+              Claude Code construit l'outil. Vous testez, vous ajustez en dialoguant,
+              et vous obtenez une application prete a l'emploi.
             </Text>
 
             <Text style={paragraph}>
-              <strong>Pas besoin de savoir coder.</strong> Vous decrivez ce que vous
-              voulez en francais, Claude Code fait le reste : il lit vos fichiers, les
-              traite, et produit le resultat (memo, tableau, calculateur).
+              Cette approche s'appelle le{' '}
+              <strong>Vibe Coding</strong> — un concept reconnu
+              (mot de l'annee Collins Dictionary 2025, couvert par{' '}
+              <Link href="https://news.harvard.edu/gazette/story/2026/04/vibe-coding-may-offer-insight-into-our-ai-future/" style={{ color: BLUE, textDecoration: 'underline' }}>
+                Harvard
+              </Link>
+              ,{' '}
+              <Link href="https://www.scientificamerican.com/article/how-claude-code-is-bringing-vibe-coding-to-everyone/" style={{ color: BLUE, textDecoration: 'underline' }}>
+                Scientific American
+              </Link>
+              ,{' '}
+              <Link href="https://www.washingtonpost.com/technology/interactive/2026/claude-code-cowork-build-apps/" style={{ color: BLUE, textDecoration: 'underline' }}>
+                Washington Post
+              </Link>
+              ). Vous guidez l'IA par la conversation, pas par le code.
             </Text>
 
-            {/* Ce que Claude Code sait faire */}
+            {/* Cas concret : Contrat JFK */}
+            <Section
+              style={{
+                backgroundColor: ORANGE_LIGHT,
+                borderRadius: '12px',
+                padding: '16px 20px',
+                marginBottom: '20px',
+                borderLeft: `4px solid ${ORANGE}`,
+              }}
+            >
+              <Text style={{ fontSize: '14px', fontWeight: 700, color: ORANGE, margin: '0 0 8px 0' }}>
+                Exemple reel : l'application Contrats JFK
+              </Text>
+              <Text style={{ fontSize: '13px', color: T2, margin: '0 0 8px 0', lineHeight: '20px' }}>
+                Lors de notre session J2, nous avons cree ensemble une application de
+                generation automatisee de contrats de travail. En decrivant le besoin
+                a Claude Code, il a construit :
+              </Text>
+              <Text style={{ fontSize: '13px', color: T2, margin: '0 0 4px 0', lineHeight: '20px' }}>
+                • Un <strong>formulaire</strong> pour saisir les informations du salarie
+              </Text>
+              <Text style={{ fontSize: '13px', color: T2, margin: '0 0 4px 0', lineHeight: '20px' }}>
+                • Une <strong>base de donnees</strong> des employeurs Leclerc
+              </Text>
+              <Text style={{ fontSize: '13px', color: T2, margin: '0 0 4px 0', lineHeight: '20px' }}>
+                • La <strong>grille CCN IDCC 2216</strong> integree (niveaux, echelons, salaires)
+              </Text>
+              <Text style={{ fontSize: '13px', color: T2, margin: '0 0 4px 0', lineHeight: '20px' }}>
+                • La <strong>generation automatique</strong> du contrat au format Word
+              </Text>
+              <Text style={{ fontSize: '13px', color: T2, margin: '0', lineHeight: '20px' }}>
+                • Un <strong>historique</strong> de tous les contrats generes
+              </Text>
+            </Section>
+
+            {/* La methode */}
             <Heading as="h3" style={{ fontSize: '16px', fontWeight: 700, color: T1, margin: '20px 0 12px 0' }}>
-              Ce que Claude Code fait pour un avocat
+              La methode : 4 etapes, zero competence technique
             </Heading>
 
             <Section style={stepBox}>
@@ -666,11 +714,11 @@ export const KlatovskyFormationIA = ({
                   <Text style={stepCircle}>1</Text>
                 </Column>
                 <Column style={stepBody}>
-                  <Text style={stepTitle}>Analyser des centaines de pages d'un coup</Text>
+                  <Text style={stepTitle}>Decrivez votre besoin</Text>
                   <Text style={stepDesc}>
-                    Deposez un dossier entier (contrat + annexes + pieces adverses).
-                    Claude Code lit tout, identifie les points critiques, et produit
-                    un memo synthetique avec les irregularites par clause.
+                    En langage naturel, expliquez a Claude Code ce que vous voulez.
+                    Exemple : &ldquo;Je veux une application pour generer des contrats
+                    de travail conformes a la CCN 2216.&rdquo;
                   </Text>
                 </Column>
               </Row>
@@ -682,12 +730,11 @@ export const KlatovskyFormationIA = ({
                   <Text style={{ ...stepCircle, backgroundColor: BLUE }}>2</Text>
                 </Column>
                 <Column style={stepBody}>
-                  <Text style={stepTitle}>Creer des calculateurs sur mesure</Text>
+                  <Text style={stepTitle}>Claude Code construit l'application</Text>
                   <Text style={stepDesc}>
-                    Demandez un calculateur d'indemnites de licenciement integrant
-                    le bareme Macron, la convention collective et l'anciennete.
-                    Claude Code genere une page interactive que vous utilisez
-                    directement dans votre navigateur.
+                    Claude Code cree les fichiers, le formulaire, la base de donnees,
+                    la logique metier. Vous n'ecrivez aucune ligne de code —
+                    il fait tout.
                   </Text>
                 </Column>
               </Row>
@@ -699,12 +746,12 @@ export const KlatovskyFormationIA = ({
                   <Text style={stepCircle}>3</Text>
                 </Column>
                 <Column style={stepBody}>
-                  <Text style={stepTitle}>Comparer des documents automatiquement</Text>
+                  <Text style={stepTitle}>Testez et ajustez en dialoguant</Text>
                   <Text style={stepDesc}>
-                    Deux versions d'un contrat ? Des conclusions et des pieces
-                    contradictoires ? Claude Code compare, identifie les
-                    differences et les incoherences, et produit un rapport
-                    structure.
+                    Vous testez l'application. Si quelque chose ne va pas,
+                    dites-le : &ldquo;Ajoute un champ pour la periode d'essai&rdquo;
+                    ou &ldquo;Change le calcul de l'anciennete&rdquo;.
+                    Claude Code corrige instantanement.
                   </Text>
                 </Column>
               </Row>
@@ -716,54 +763,55 @@ export const KlatovskyFormationIA = ({
                   <Text style={{ ...stepCircle, backgroundColor: BLUE }}>4</Text>
                 </Column>
                 <Column style={stepBody}>
-                  <Text style={stepTitle}>Automatiser les taches repetitives</Text>
+                  <Text style={stepTitle}>Application fonctionnelle, prete a l'emploi</Text>
                   <Text style={stepDesc}>
-                    Traitement par lots : analysez 50 contrats avec les memes
-                    criteres, generez un rapport pour chacun. Claude Code
-                    travaille pendant que vous faites autre chose.
+                    L'application tourne sur votre ordinateur. Vous l'utilisez
+                    au quotidien pour generer des contrats, calculer des indemnites,
+                    ou gerer vos dossiers.
                   </Text>
                 </Column>
               </Row>
             </Section>
 
-            {/* Prompts concrets Claude Code */}
+            {/* Prompts concrets */}
             <Heading as="h3" style={{ fontSize: '16px', fontWeight: 700, color: T1, margin: '20px 0 12px 0' }}>
-              Prompts prets a copier — donnez vos documents a Claude Code
+              Prompts a copier dans Claude Desktop (onglet Code)
             </Heading>
             <Text style={{ fontSize: '13px', color: T3, margin: '0 0 16px 0', lineHeight: '20px' }}>
-              Ouvrez Claude Code, collez un de ces prompts, et joignez vos fichiers. Claude fait le reste.
+              Ouvrez Claude Desktop, cliquez sur l'onglet &ldquo;Code&rdquo;, et collez un de ces prompts.
+              Placez vos documents dans un dossier sur votre Bureau avant de commencer.
             </Text>
 
             <PromptExample
-              feature="Audit complet d'un dossier"
-              context="Deposez toutes les pieces d'un dossier contentieux :"
-              prompt="Voici le dossier complet [joindre fichiers : contrat, lettre de licenciement, bulletins, attestations, pieces adverses]. Analyse chaque document. Produis : 1) Un resume executif du dossier en 10 lignes, 2) Les forces et faiblesses de notre position, 3) Les irregularites dans la procedure de licenciement, 4) Les pieces manquantes que je devrais reclamer, 5) Un tableau des indemnites estimees (3 scenarios). Tout doit etre dans un memo structure que je peux imprimer."
-              result="Claude Code produit un memo PDF complet : resume, analyse clause par clause, tableau d'indemnites, et liste des pieces a reclamer."
-              featureColor={BLUE}
+              feature="Application de generation de contrats"
+              context="Claude Code cree une application complete de A a Z :"
+              prompt="Cree une application pour generer des contrats de travail. L'application doit avoir : un formulaire avec les informations du salarie (nom, prenom, poste, salaire, date d'embauche, type de contrat CDI/CDD), une base de donnees des employeurs, la grille de la convention collective IDCC 2216 (niveaux et echelons), et la generation du contrat au format Word. Ajoute un historique des contrats generes."
+              result="Claude Code cree une application avec formulaire, base de donnees, grille CCN, et generation Word. Vous la lancez en double-cliquant sur un fichier."
+              featureColor={ORANGE}
             />
 
             <PromptExample
               feature="Calculateur d'indemnites interactif"
               context="Claude Code cree un outil de calcul personnalise :"
-              prompt="Cree un calculateur d'indemnites de licenciement en HTML interactif. Il doit prendre en entree : salaire brut mensuel, anciennete, age, convention collective (IDCC). Il doit calculer : indemnite legale, indemnite conventionnelle (si plus favorable), indemnite de preavis, conges payes sur preavis, et fourchette du bareme Macron. Affiche les 3 scenarios (minimum, median, maximum) dans un tableau clair. Ajoute un bouton pour imprimer."
-              result="Claude Code genere une page HTML interactive : saisissez les donnees du salarie, les indemnites s'affichent instantanement avec les 3 scenarios."
-              featureColor={ORANGE}
-            />
-
-            <PromptExample
-              feature="Comparaison de deux contrats"
-              context="Identifiez les differences entre deux versions d'un document :"
-              prompt="Voici deux versions d'un contrat de travail [joindre les 2 fichiers]. Compare clause par clause. Pour chaque difference, indique : la clause concernee, ce qui a change, si le changement est favorable ou defavorable au salarie, et le risque juridique associe. Produis un tableau comparatif que je peux joindre au dossier."
-              result="Claude Code produit un tableau comparatif clause par clause avec code couleur : vert (favorable), rouge (defavorable), orange (a verifier)."
+              prompt="Cree un calculateur d'indemnites de licenciement en HTML. Champs : salaire brut mensuel, anciennete en annees, age du salarie, convention collective (IDCC). Calcule : indemnite legale de licenciement, indemnite conventionnelle si plus favorable, preavis, conges payes sur preavis, et fourchette du bareme Macron (plancher et plafond). Affiche les 3 scenarios (favorable, median, defavorable) dans un tableau. Ajoute un bouton imprimer."
+              result="Claude Code genere un fichier HTML que vous ouvrez dans votre navigateur. Saisissez les donnees, les indemnites s'affichent instantanement."
               featureColor={BLUE}
             />
 
             <PromptExample
-              feature="Synthese de jurisprudence sur un theme"
-              context="Claude Code recherche et synthetise la jurisprudence :"
-              prompt="Recherche les 10 derniers arrets de la Cour de cassation chambre sociale sur le forfait jours (convention de forfait, depassement, nullite). Pour chaque arret : date, numero de pourvoi, faits cles en 3 lignes, solution de la Cour, portee pratique. Classe du plus recent au plus ancien. Termine par une synthese de la tendance jurisprudentielle actuelle."
-              result="Claude Code produit une fiche de jurisprudence structuree : 10 arrets resumes, tendance identifiee, et recommandations pratiques."
+              feature="Outil d'audit de contrat de travail"
+              context="Placez le contrat PDF dans le dossier du projet, puis :"
+              prompt="Lis le fichier contrat-martin.pdf dans ce dossier. Analyse chaque clause et produis un rapport d'audit avec : 1) Conformite au Code du travail, 2) Conformite a la CCN applicable, 3) Clause de non-concurrence (validite, contrepartie), 4) Forfait jours (respect L3121-58), 5) Periode d'essai. Pour chaque point, indique conforme/non conforme avec l'article de loi. Genere le rapport dans un fichier Word."
+              result="Claude Code lit le PDF, analyse clause par clause, et genere un rapport Word structure avec les references legales."
               featureColor={ORANGE}
+            />
+
+            <PromptExample
+              feature="Tableau de bord suivi des dossiers"
+              context="Claude Code cree un outil de pilotage pour le cabinet :"
+              prompt="Cree une application de suivi des dossiers contentieux. Pour chaque dossier : reference, nom du client, adversaire, juridiction (CPH, CA), prochaine echeance, statut (en cours, audience, cloture). Ajoute un tableau de bord avec les audiences des 30 prochains jours, les echeances critiques, et un compteur de dossiers par statut. Format : application web que je lance en local."
+              result="Claude Code cree une application de suivi complete avec tableau de bord, filtres, et alertes echeances."
+              featureColor={BLUE}
             />
 
             {/* Comment y acceder */}
@@ -780,41 +828,66 @@ export const KlatovskyFormationIA = ({
                 Comment utiliser Claude Code ?
               </Text>
               <Text style={{ fontSize: '13px', color: T2, margin: '0 0 8px 0', lineHeight: '20px' }}>
-                <strong>Sur le web</strong> — Rendez-vous sur{' '}
-                <Link href="https://claude.ai/code" style={{ color: BLUE, textDecoration: 'underline' }}>
-                  claude.ai/code
-                </Link>
-                {' '}(rien a installer, ca marche dans votre navigateur).
-              </Text>
-              <Text style={{ fontSize: '13px', color: T2, margin: '0 0 8px 0', lineHeight: '20px' }}>
-                <strong>Sur votre Mac ou PC</strong> — Telechargez l'application{' '}
+                <strong>Sur votre Mac ou PC</strong> — Ouvrez l'application{' '}
                 <Link href="https://claude.com/download" style={{ color: BLUE, textDecoration: 'underline' }}>
                   Claude Desktop
                 </Link>
-                {' '}et cliquez sur l'onglet &ldquo;Code&rdquo;.
+                , cliquez sur l'onglet &ldquo;Code&rdquo;, selectionnez le dossier
+                ou se trouvent vos documents, et decrivez ce que vous voulez.
+              </Text>
+              <Text style={{ fontSize: '13px', color: T2, margin: '0 0 8px 0', lineHeight: '20px' }}>
+                <strong>Important</strong> — Placez vos documents (PDF, Word)
+                dans un dossier dedie sur votre Bureau avant de commencer.
+                Claude Code travaille avec les fichiers de ce dossier.
               </Text>
               <Text style={{ fontSize: '13px', color: T2, margin: '0', lineHeight: '20px' }}>
-                <strong>Abonnement</strong> — Necessite un abonnement Claude Pro ou Max
-                (le meme que celui que vous utilisez deja).
+                <strong>Abonnement</strong> — Inclus dans votre abonnement Claude
+                Max (celui que vous utilisez deja).
               </Text>
             </Section>
 
-            {/* Lien doc officielle */}
+            {/* Avertissement */}
+            <Section
+              style={{
+                backgroundColor: ORANGE_LIGHT,
+                borderRadius: '12px',
+                padding: '14px 18px',
+                marginTop: '16px',
+                borderLeft: `4px solid ${ORANGE}`,
+              }}
+            >
+              <Text style={{ fontSize: '13px', color: T2, margin: '0', lineHeight: '20px' }}>
+                <strong style={{ color: ORANGE }}>Rappel</strong> : Claude Code est un outil
+                de creation — il construit des applications et analyse des fichiers
+                locaux. Pour la recherche web (Legifrance, jurisprudence), la conversation
+                classique dans Claude Desktop avec la recherche web activee reste
+                plus adaptee.
+              </Text>
+            </Section>
+
+            {/* Liens doc */}
             <Section style={{ marginTop: '16px' }}>
               <Text style={{ fontSize: '13px', color: T3, margin: '0', lineHeight: '20px' }}>
-                Documentation officielle :{' '}
+                Documentation :{' '}
                 <Link
                   href="https://code.claude.com/docs/en/overview"
                   style={{ color: BLUE, textDecoration: 'underline' }}
                 >
-                  code.claude.com/docs
+                  Claude Code (Anthropic)
                 </Link>
                 {' '}|{' '}
                 <Link
-                  href="https://platform.claude.com/docs/fr/about-claude/use-case-guides/legal-summarization"
+                  href="https://vibecoding.app/"
                   style={{ color: BLUE, textDecoration: 'underline' }}
                 >
-                  Guide resume juridique (Anthropic)
+                  Vibe Coding — Guide
+                </Link>
+                {' '}|{' '}
+                <Link
+                  href="https://www.washingtonpost.com/technology/interactive/2026/claude-code-cowork-build-apps/"
+                  style={{ color: BLUE, textDecoration: 'underline' }}
+                >
+                  Washington Post — Test Cowork
                 </Link>
               </Text>
             </Section>
