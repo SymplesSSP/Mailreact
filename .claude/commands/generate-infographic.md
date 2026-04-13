@@ -95,7 +95,7 @@ python3 scripts/generate-infographic.py \
   --aspect-ratio "16:9" \
   --max-width 1200 \
   --max-kb 400 \
-  --api-key "AIzaSyA0r8pYUtvSg5X_GdvVrQqqYVpTLeF7xMI"
+  --api-key "$GEMINI_API_KEY"
 ```
 
 ### Options aspect-ratio selon le type
