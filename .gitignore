@@ -6,3 +6,5 @@ out/
 .react-email/
 audit-*.png
 mail-*.png
+.env
+.env.*
