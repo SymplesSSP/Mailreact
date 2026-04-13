@@ -43,11 +43,13 @@ const AgentCard = ({
   icon,
   name,
   domain,
+  quote,
   color,
 }: {
   icon: string;
   name: string;
   domain: string;
+  quote?: string;
   color: string;
 }) => (
   <Section style={{ marginBottom: '12px' }}>
@@ -89,6 +91,19 @@ const AgentCard = ({
         >
           {domain}
         </Text>
+        {quote && (
+          <Text
+            style={{
+              fontSize: '12px',
+              color: T2,
+              margin: '2px 0 0 0',
+              lineHeight: '16px',
+              fontStyle: 'italic',
+            }}
+          >
+            &ldquo;{quote}&rdquo;
+          </Text>
+        )}
       </Column>
     </Row>
   </Section>
@@ -471,10 +486,35 @@ export const LeclercFrouardJ12 = ({
                   <Text style={statLabel}>AGENTS IA</Text>
                 </Column>
                 <Column style={statCell}>
-                  <Text style={statNumber}>10</Text>
-                  <Text style={statLabel}>MOIS</Text>
+                  <Text style={statNumber}>4+</Text>
+                  <Text style={statLabel}>DOMAINES METIER</Text>
                 </Column>
               </Row>
+            </Section>
+
+            {/* Verbatims exterieurs */}
+            <Section
+              style={{
+                backgroundColor: BG,
+                borderRadius: '12px',
+                padding: '16px 20px',
+                marginTop: '20px',
+                border: `1px solid ${BD}`,
+              }}
+            >
+              <Text style={{ fontSize: '13px', color: T2, margin: '0 0 8px 0', lineHeight: '20px' }}>
+                <strong style={{ color: BLUE }}>Gartner (2026)</strong> : 40% des
+                applications d'entreprise contiendront des agents IA d'ici fin 2026.
+              </Text>
+              <Text style={{ fontSize: '13px', color: T2, margin: '0 0 8px 0', lineHeight: '20px' }}>
+                <strong style={{ color: BLUE }}>Bpifrance</strong> : 62% des PME
+                qui ont investi dans l'IA constatent 1,80 euros de retour pour chaque
+                euro investi.
+              </Text>
+              <Text style={{ fontSize: '13px', color: T2, margin: '0', lineHeight: '20px' }}>
+                <strong style={{ color: BLUE }}>Satya Nadella (Microsoft, 2026)</strong> :
+                les agents IA sont la prochaine revolution de productivite en entreprise.
+              </Text>
             </Section>
           </Section>
 
@@ -558,6 +598,58 @@ export const LeclercFrouardJ12 = ({
               procedures securite.
             </Text>
 
+            {/* Chatbot vs Agent IA */}
+            <Section
+              style={{
+                backgroundColor: BG,
+                borderRadius: '12px',
+                padding: '16px 20px',
+                marginBottom: '20px',
+                border: `1px solid ${BD}`,
+              }}
+            >
+              <Text style={{ fontSize: '14px', fontWeight: 700, color: T1, margin: '0 0 10px 0' }}>
+                Chatbot classique vs Agent IA ClawdBot
+              </Text>
+              <Row>
+                <Column style={{ width: '48%', verticalAlign: 'top' }}>
+                  <Text style={{ fontSize: '11px', fontWeight: 700, color: T3, textTransform: 'uppercase' as const, margin: '0 0 6px 0' }}>
+                    Chatbot classique
+                  </Text>
+                  <Text style={{ fontSize: '12px', color: T3, margin: '0 0 4px 0', lineHeight: '18px' }}>
+                    Attend votre question
+                  </Text>
+                  <Text style={{ fontSize: '12px', color: T3, margin: '0 0 4px 0', lineHeight: '18px' }}>
+                    Connaissances generales
+                  </Text>
+                  <Text style={{ fontSize: '12px', color: T3, margin: '0 0 4px 0', lineHeight: '18px' }}>
+                    1 seul interlocuteur
+                  </Text>
+                  <Text style={{ fontSize: '12px', color: T3, margin: '0', lineHeight: '18px' }}>
+                    Ne connait pas votre magasin
+                  </Text>
+                </Column>
+                <Column style={{ width: '4%' }} />
+                <Column style={{ width: '48%', verticalAlign: 'top' }}>
+                  <Text style={{ fontSize: '11px', fontWeight: 700, color: BLUE, textTransform: 'uppercase' as const, margin: '0 0 6px 0' }}>
+                    Agent IA ClawdBot
+                  </Text>
+                  <Text style={{ fontSize: '12px', color: T1, margin: '0 0 4px 0', lineHeight: '18px' }}>
+                    <strong>Analyse et recommande</strong>
+                  </Text>
+                  <Text style={{ fontSize: '12px', color: T1, margin: '0 0 4px 0', lineHeight: '18px' }}>
+                    <strong>Vos donnees reelles</strong>
+                  </Text>
+                  <Text style={{ fontSize: '12px', color: T1, margin: '0 0 4px 0', lineHeight: '18px' }}>
+                    <strong>7 experts avec des avis differents</strong>
+                  </Text>
+                  <Text style={{ fontSize: '12px', color: T1, margin: '0', lineHeight: '18px' }}>
+                    <strong>Connait vos chiffres Frouard</strong>
+                  </Text>
+                </Column>
+              </Row>
+            </Section>
+
             {/* Infographic ClawdBot */}
             <Img
               src="https://symplesssp.github.io/Mailreact/emails/static/infographic-clawdbot-agents.png"
@@ -573,42 +665,49 @@ export const LeclercFrouardJ12 = ({
               icon="🎯"
               name="Le Coordinateur"
               domain="Synthese et plan d'action priorise — orchestre les 6 autres agents"
+              quote="Je synthetise les avis, tranche les desaccords et livre un plan d'action en 60 secondes."
               color={BLUE_LIGHT}
             />
             <AgentCard
               icon="📊"
               name="Le Commercial"
-              domain="CA, marges, performance par rayon, comparaison SCAPEST"
+              domain="CA, marges, performance par rayon, comparaison aux 22 magasins SCAPEST"
+              quote="Il faut investir pour vendre plus."
               color={ORANGE_LIGHT}
             />
             <AgentCard
               icon="💰"
               name="La Finance"
-              domain="Rentabilite, creances, controle factures, comptes d'exploitation"
+              domain="Marge semi-nette, impayes fournisseurs, ecarts de facturation, rentabilite"
+              quote="Chaque euro depense doit prouver son retour."
               color={BLUE_LIGHT}
             />
             <AgentCard
               icon="👥"
               name="Les RH"
-              domain="Planning des 37 employes caisse, droit du travail, conventions"
+              domain="Planning des 37 employes caisse, droit du travail, convention collective"
+              quote="On ne surcharge pas toujours les memes."
               color={ORANGE_LIGHT}
             />
             <AgentCard
               icon="✅"
               name="La Qualite"
-              domain="HACCP, etiquetage, reclamations clients, avis Goodays"
+              domain="HACCP, etiquetage, reclamations clients, 4 500+ avis Google (4,2/5)"
+              quote="La conformite n'est pas negociable."
               color={BLUE_LIGHT}
             />
             <AgentCard
               icon="🔒"
               name="La Securite"
-              domain="Procedures incendie, incidents, demarque inconnue"
+              domain="Protocoles incendie, circulation, accidents, demarque inconnue"
+              quote="Aucun compromis sur la securite."
               color={ORANGE_LIGHT}
             />
             <AgentCard
               icon="🛒"
               name="La Com & le Drive"
-              domain="Marketing, 4 500+ avis Google, 574 commandes/jour au pic"
+              domain="Marketing, Drive (574 commandes/jour au pic), communication interne"
+              quote="Le client a toujours quelque chose a nous apprendre."
               color={BLUE_LIGHT}
             />
 
@@ -688,6 +787,108 @@ export const LeclercFrouardJ12 = ({
                 deploye, ClawdBot envoie chaque matin a 8h sur Telegram un resume
                 de la journee — chiffres cles, alertes, taches prioritaires. Pret
                 quand vous arrivez au bureau.
+              </Text>
+            </Section>
+
+            {/* Ce que l'IA fait vs ne fait PAS */}
+            <Heading as="h3" style={{ fontSize: '16px', fontWeight: 700, color: T1, margin: '24px 0 16px 0' }}>
+              Ce que l'IA fait vs ne fait PAS
+            </Heading>
+            <Section style={{ marginBottom: '16px' }}>
+              <Row>
+                <Column style={{ width: '48%', verticalAlign: 'top' }}>
+                  <Section
+                    style={{
+                      backgroundColor: BLUE_LIGHT,
+                      borderRadius: '12px',
+                      padding: '14px 16px',
+                      borderLeft: `4px solid ${BLUE}`,
+                    }}
+                  >
+                    <Text style={{ fontSize: '12px', fontWeight: 700, color: BLUE, textTransform: 'uppercase' as const, margin: '0 0 8px 0' }}>
+                      L'IA fait
+                    </Text>
+                    <Text style={{ fontSize: '12px', color: T2, margin: '0 0 4px 0', lineHeight: '18px' }}>
+                      Analyser en 10 secondes
+                    </Text>
+                    <Text style={{ fontSize: '12px', color: T2, margin: '0 0 4px 0', lineHeight: '18px' }}>
+                      Recommander des actions
+                    </Text>
+                    <Text style={{ fontSize: '12px', color: T2, margin: '0 0 4px 0', lineHeight: '18px' }}>
+                      Citer la reglementation
+                    </Text>
+                    <Text style={{ fontSize: '12px', color: T2, margin: '0 0 4px 0', lineHeight: '18px' }}>
+                      Identifier les tensions
+                    </Text>
+                    <Text style={{ fontSize: '12px', color: T2, margin: '0', lineHeight: '18px' }}>
+                      Repondre jour et nuit
+                    </Text>
+                  </Section>
+                </Column>
+                <Column style={{ width: '4%' }} />
+                <Column style={{ width: '48%', verticalAlign: 'top' }}>
+                  <Section
+                    style={{
+                      backgroundColor: ORANGE_LIGHT,
+                      borderRadius: '12px',
+                      padding: '14px 16px',
+                      borderLeft: `4px solid ${ORANGE}`,
+                    }}
+                  >
+                    <Text style={{ fontSize: '12px', fontWeight: 700, color: ORANGE, textTransform: 'uppercase' as const, margin: '0 0 8px 0' }}>
+                      L'IA ne fait PAS
+                    </Text>
+                    <Text style={{ fontSize: '12px', color: T2, margin: '0 0 4px 0', lineHeight: '18px' }}>
+                      Decider a votre place
+                    </Text>
+                    <Text style={{ fontSize: '12px', color: T2, margin: '0 0 4px 0', lineHeight: '18px' }}>
+                      Remplacer le terrain
+                    </Text>
+                    <Text style={{ fontSize: '12px', color: T2, margin: '0 0 4px 0', lineHeight: '18px' }}>
+                      Gerer les urgences physiques
+                    </Text>
+                    <Text style={{ fontSize: '12px', color: T2, margin: '0 0 4px 0', lineHeight: '18px' }}>
+                      Garantir l'exhaustivite
+                    </Text>
+                    <Text style={{ fontSize: '12px', color: T2, margin: '0', lineHeight: '18px' }}>
+                      Partager vos donnees
+                    </Text>
+                  </Section>
+                </Column>
+              </Row>
+            </Section>
+
+            {/* FAQ ClawdBot */}
+            <Section
+              style={{
+                backgroundColor: BG,
+                borderRadius: '12px',
+                padding: '16px 20px',
+                border: `1px solid ${BD}`,
+              }}
+            >
+              <Text style={{ fontSize: '14px', fontWeight: 700, color: T1, margin: '0 0 10px 0' }}>
+                Questions frequentes
+              </Text>
+              <Text style={{ fontSize: '13px', color: T2, margin: '0 0 8px 0', lineHeight: '20px' }}>
+                <strong>Nos donnees sont-elles en securite ?</strong> — Oui. Les donnees
+                sont sur un serveur prive, separe du moteur IA (DeepSeek via OpenRouter).
+                L'IA n'a pas acces au serveur de donnees en dehors des requetes.
+              </Text>
+              <Text style={{ fontSize: '13px', color: T2, margin: '0 0 8px 0', lineHeight: '20px' }}>
+                <strong>L'IA peut-elle se tromper ?</strong> — Oui. C'est pourquoi
+                chaque reponse est presentee pour validation. L'IA recommande,
+                l'humain decide.
+              </Text>
+              <Text style={{ fontSize: '13px', color: T2, margin: '0 0 8px 0', lineHeight: '20px' }}>
+                <strong>Qui peut parler aux assistants ?</strong> — Seuls les
+                utilisateurs autorises sur le groupe Telegram Frouard. Acces controle
+                par administrateur.
+              </Text>
+              <Text style={{ fontSize: '13px', color: T2, margin: '0', lineHeight: '20px' }}>
+                <strong>Les assistants apprennent-ils de nos conversations ?</strong> — Non.
+                Chaque requete est independante. Les donnees de reference sont mises
+                a jour manuellement quand vous deposez de nouveaux fichiers.
               </Text>
             </Section>
           </Section>
@@ -962,6 +1163,41 @@ export const LeclercFrouardJ12 = ({
               prompt="Tu es juriste specialise droit du travail grande distribution. Un salarie conteste ses horaires de badgeage sur les 3 derniers mois. Voici les faits [decrire la situation]. Structure ma reflexion : qualification juridique, textes applicables (convention collective, Code du travail), risques en cas de contentieux, et prochaines etapes recommandees. Attention : ceci est une aide a la reflexion, pas un avis juridique."
               featureColor={T3}
             />
+
+            <PromptExample
+              feature="📊 Direction — Aide a la decision"
+              context="Pour trancher un arbitrage complexe :"
+              prompt="Tu es consultant en management grande distribution. Reflechis etape par etape. Contexte : [decrire la decision a prendre]. Analyse les pour et les contre. Propose 3 options avec avantages, risques et cout estime. Recommande celle qui maximise le ratio benefice/risque. Format : tableau comparatif + recommandation en 3 bullets."
+              featureColor={BLUE}
+            />
+
+            <PromptExample
+              feature="👥 RH — Email collaborateur"
+              context="Pour les communications sensibles :"
+              prompt="Tu es RRH bienveillant dans un hypermarche E.Leclerc (convention collective commerce de detail). Redige un email a [prenom] pour [objet : changement planning / rappel a l'ordre / felicitations / entretien]. Ton : professionnel, empathique, conforme au droit du travail. Maximum 150 mots."
+              featureColor={PURPLE}
+            />
+
+            <PromptExample
+              feature="✅ Qualite — Rapport d'incident"
+              context="Pour documenter un incident :"
+              prompt="Redige un rapport d'incident pour [decrire : chute client, probleme produit, reclamation grave]. Structure en fiche : faits (date, lieu, personnes presentes), causes identifiees, actions correctives immediates, actions preventives, responsable du suivi, date de revue. Ton factuel et neutre. Format PDF."
+              featureColor={GREEN}
+            />
+
+            <PromptExample
+              feature="📧 Communication — Email fournisseur"
+              context="Pour les echanges fournisseurs (retard, erreur, negociation) :"
+              prompt="Tu es responsable approvisionnement E.Leclerc Frouard. Redige un email au fournisseur [nom] concernant [retard de livraison / erreur de facturation / negociation tarifaire]. Ton : ferme mais professionnel, orienté solution. Cite les references commande et les delais contractuels. Maximum 200 mots."
+              featureColor={ORANGE}
+            />
+
+            <PromptExample
+              feature="📧 Communication — Note interne"
+              context="Pour informer les equipes :"
+              prompt="Redige une note interne pour informer les [equipes / cadres / chefs de rayon] de [objet : nouveau process, changement horaire, evenement]. Inclus : date d'entree en vigueur, ce qui change concretement, et le contact pour les questions. 150 mots maximum, ton direct."
+              featureColor={ORANGE}
+            />
           </Section>
 
           <Hr style={divider} />
@@ -1156,6 +1392,100 @@ export const LeclercFrouardJ12 = ({
               </Row>
             </Section>
 
+            {/* Prompts exacts Workspace Studio */}
+            <Heading as="h3" style={{ fontSize: '16px', fontWeight: 700, color: T1, margin: '24px 0 16px 0' }}>
+              Prompts exacts a coller dans Workspace Studio
+            </Heading>
+
+            <PromptExample
+              feature="📧 Cas 1 — Synthese emails quotidienne"
+              context="Prompt a entrer dans Workspace Studio (Starter : horaire 7h50) :"
+              prompt="Chaque matin a 7h50, resume-moi les emails non lus recus depuis la veille a 18h. Classe-les en trois categories : urgent, a traiter, info. Pour chaque email : expediteur, objet, 1 phrase de resume, action requise. Envoie le resultat dans Google Chat."
+              result="Resultat : un message Chat structure chaque matin avant l'arrivee au bureau. Gain : 10-15 min/jour."
+              featureColor={BLUE}
+            />
+
+            <PromptExample
+              feature="🔴 Cas 2 — Alerte fournisseurs critiques"
+              context="Prompt a entrer dans Workspace Studio (Starter : email recu) :"
+              prompt="Quand je recois un email contenant 'rupture', 'retard de livraison', 'incident', 'annulation' ou 'penurie' : 1. Extrais l'expediteur et le produit concerne. 2. Labellise l'email 'EXPLOITATION — Urgent'. 3. Envoie une notification dans Google Chat avec le resume."
+              result="Resultat : alerte temps reel. Plus aucune rupture ou retard ne passe inapercu."
+              featureColor={ORANGE}
+            />
+
+            <PromptExample
+              feature="⚠️ Cas 6 — Detection emails sensibles"
+              context="Prompt a entrer dans Workspace Studio (Starter : email recu) :"
+              prompt="Quand je recois un email contenant 'prud'hommes', 'avocat', 'accident du travail', 'mise en demeure', 'inspection du travail' ou 'constat' : 1. Labellise 'RH — SENSIBLE'. 2. Alerte immediate dans Google Chat avec expediteur, objet et extrait pertinent. 3. Ne reponds pas automatiquement."
+              result="Resultat : zero sujet sensible oublie. Severine Chantre et Pascal Cordier alertes en temps reel."
+              featureColor={'#E11D48'}
+            />
+
+            {/* Guide de demarrage */}
+            <Heading as="h3" style={{ fontSize: '16px', fontWeight: 700, color: T1, margin: '24px 0 16px 0' }}>
+              Demarrer en 4 etapes
+            </Heading>
+
+            <Section style={stepBox}>
+              <Row>
+                <Column style={stepNum}>
+                  <Text style={{ ...stepCircle, backgroundColor: BLUE }}>1</Text>
+                </Column>
+                <Column style={stepBody}>
+                  <Text style={stepTitle}>Ouvrir studio.workspace.google.com</Text>
+                  <Text style={stepDesc}>
+                    Avec votre compte Google Workspace Frouard. L'icone apparait aussi
+                    dans Gmail et Drive.
+                  </Text>
+                </Column>
+              </Row>
+            </Section>
+
+            <Section style={stepBox}>
+              <Row>
+                <Column style={stepNum}>
+                  <Text style={stepCircle}>2</Text>
+                </Column>
+                <Column style={stepBody}>
+                  <Text style={stepTitle}>Choisir un template ou creer un flow</Text>
+                  <Text style={stepDesc}>
+                    Recommande pour debuter : le template &ldquo;Get a daily summary
+                    of unread emails&rdquo; dans l'onglet Discover.
+                  </Text>
+                </Column>
+              </Row>
+            </Section>
+
+            <Section style={stepBox}>
+              <Row>
+                <Column style={stepNum}>
+                  <Text style={{ ...stepCircle, backgroundColor: BLUE }}>3</Text>
+                </Column>
+                <Column style={stepBody}>
+                  <Text style={stepTitle}>Tester avec Test Run</Text>
+                  <Text style={stepDesc}>
+                    Cliquez &ldquo;Test Run&rdquo; pour executer le flow sur vos vraies
+                    donnees sans risque. Verifiez le resultat avant d'activer.
+                  </Text>
+                </Column>
+              </Row>
+            </Section>
+
+            <Section style={stepBox}>
+              <Row>
+                <Column style={stepNum}>
+                  <Text style={stepCircle}>4</Text>
+                </Column>
+                <Column style={stepBody}>
+                  <Text style={stepTitle}>Activer avec Turn On</Text>
+                  <Text style={stepDesc}>
+                    Une fois satisfait du test, activez le flow. Il s'executera
+                    automatiquement selon le declencheur configure.
+                  </Text>
+                </Column>
+              </Row>
+            </Section>
+
             <Section
               style={{
                 backgroundColor: ORANGE_LIGHT,
@@ -1164,11 +1494,129 @@ export const LeclercFrouardJ12 = ({
                 borderLeft: `4px solid ${ORANGE}`,
               }}
             >
-              <Text style={{ fontSize: '13px', color: T2, margin: '0', lineHeight: '20px' }}>
+              <Text style={{ fontSize: '13px', color: T2, margin: '0 0 8px 0', lineHeight: '20px' }}>
                 <strong style={{ color: ORANGE }}>Prerequis</strong> : plan Google Workspace
                 Business ou Enterprise. L'administrateur doit activer Workspace Studio
-                et Gemini for Workspace. Testez chaque flow avec &ldquo;Test Run&rdquo; avant
-                d'activer.
+                et Gemini for Workspace (sans Gemini, seules les automatisations basiques
+                fonctionnent). Si un flow est partage avec un compte sans Gemini,
+                les etapes IA sont automatiquement retirees.
+              </Text>
+              <Text style={{ fontSize: '13px', color: T2, margin: '0', lineHeight: '20px' }}>
+                <strong style={{ color: ORANGE }}>Securite</strong> : les donnees restent
+                propriete de l'organisation, non utilisees pour l'entrainement IA Google.
+                Conformite SOC 2 / ISO 27001 / RGPD. Controle admin granulaire.
+              </Text>
+            </Section>
+          </Section>
+
+          <Hr style={divider} />
+
+          {/* ════════════════ QUESTIONNAIRE MATURITE IA ════════════════ */}
+          <Section style={content}>
+            <Section
+              style={{
+                backgroundColor: BLUE,
+                borderRadius: '12px',
+                padding: '20px 24px',
+                marginBottom: '24px',
+              }}
+            >
+              <Heading
+                as="h2"
+                style={{ fontSize: '20px', color: '#ffffff', margin: '0 0 4px 0' }}
+              >
+                Auto-evaluation — 9 dimensions de maturite IA
+              </Heading>
+              <Text style={{ fontSize: '14px', color: '#B3D4F7', margin: '0' }}>
+                Ou en etes-vous ? Notez-vous de 1 (debutant) a 5 (autonome)
+              </Text>
+            </Section>
+
+            <Section
+              style={{
+                backgroundColor: BG,
+                borderRadius: '12px',
+                padding: '16px 20px',
+                border: `1px solid ${BD}`,
+                marginBottom: '16px',
+              }}
+            >
+              <Text style={{ fontSize: '13px', color: T1, margin: '0 0 6px 0', lineHeight: '22px' }}>
+                <strong style={{ color: BLUE }}>1. Comprehension</strong> — Je comprends ce que l'IA peut et ne peut pas faire sur mon metier
+              </Text>
+              <Text style={{ fontSize: '13px', color: T1, margin: '0 0 6px 0', lineHeight: '22px' }}>
+                <strong style={{ color: BLUE }}>2. Usage reel</strong> — Cette semaine, j'ai utilise l'IA pour une tache pro concrete
+              </Text>
+              <Text style={{ fontSize: '13px', color: T1, margin: '0 0 6px 0', lineHeight: '22px' }}>
+                <strong style={{ color: ORANGE }}>3. Autonomie</strong> — Je peux refaire seul une analyse equivalente a celles vues en formation
+              </Text>
+              <Text style={{ fontSize: '13px', color: T1, margin: '0 0 6px 0', lineHeight: '22px' }}>
+                <strong style={{ color: ORANGE }}>4. Mise a jour</strong> — Je sais reprendre une analyse et la relancer avec les donnees du mois suivant
+              </Text>
+              <Text style={{ fontSize: '13px', color: T1, margin: '0 0 6px 0', lineHeight: '22px' }}>
+                <strong style={{ color: BLUE }}>5. Besoin a prompt</strong> — Je sais traduire un besoin metier flou en un prompt IA clair
+              </Text>
+              <Text style={{ fontSize: '13px', color: T1, margin: '0 0 6px 0', lineHeight: '22px' }}>
+                <strong style={{ color: BLUE }}>6. Reutilisation</strong> — Je reutilise un agent, un prompt ou un notebook au moins 1 fois par semaine
+              </Text>
+              <Text style={{ fontSize: '13px', color: T1, margin: '0 0 6px 0', lineHeight: '22px' }}>
+                <strong style={{ color: ORANGE }}>7. Validation</strong> — Je sais reperer quand l'IA se trompe ou hallucine sur mes donnees
+              </Text>
+              <Text style={{ fontSize: '13px', color: T1, margin: '0 0 6px 0', lineHeight: '22px' }}>
+                <strong style={{ color: ORANGE }}>8. Confidentialite</strong> — Je sais ce que je peux et ne peux pas mettre dans l'IA
+              </Text>
+              <Text style={{ fontSize: '13px', color: T1, margin: '0', lineHeight: '22px' }}>
+                <strong style={{ color: BLUE }}>9. Valeur</strong> — L'IA m'a fait gagner du temps ce mois-ci
+              </Text>
+            </Section>
+
+            {/* Grille de scoring */}
+            <Section
+              style={{
+                backgroundColor: BLUE_LIGHT,
+                borderRadius: '12px',
+                padding: '14px 18px',
+                marginBottom: '16px',
+                borderLeft: `4px solid ${BLUE}`,
+              }}
+            >
+              <Text style={{ fontSize: '13px', color: T2, margin: '0 0 4px 0', lineHeight: '20px' }}>
+                <strong>Score moyen inferieur a 2</strong> : Initiation — poursuivre l'accompagnement
+              </Text>
+              <Text style={{ fontSize: '13px', color: T2, margin: '0 0 4px 0', lineHeight: '20px' }}>
+                <strong>Score 2 a 3</strong> : Decouverte — ancrer les usages avec un referent
+              </Text>
+              <Text style={{ fontSize: '13px', color: T2, margin: '0 0 4px 0', lineHeight: '20px' }}>
+                <strong>Score 3 a 3,5</strong> : Appropriation — deployer les agents en production
+              </Text>
+              <Text style={{ fontSize: '13px', color: T2, margin: '0 0 4px 0', lineHeight: '20px' }}>
+                <strong>Score 3,5 a 4,2</strong> : Operationnel — capitaliser et diffuser
+              </Text>
+              <Text style={{ fontSize: '13px', color: T2, margin: '0', lineHeight: '20px' }}>
+                <strong>Score superieur a 4,2</strong> : Maitrise / Autonome
+              </Text>
+            </Section>
+
+            {/* 3 questions ouvertes */}
+            <Section
+              style={{
+                backgroundColor: ORANGE_LIGHT,
+                borderRadius: '12px',
+                padding: '14px 18px',
+                borderLeft: `4px solid ${ORANGE}`,
+              }}
+            >
+              <Text style={{ fontSize: '14px', fontWeight: 700, color: ORANGE, margin: '0 0 8px 0' }}>
+                3 questions collectives pour la suite
+              </Text>
+              <Text style={{ fontSize: '13px', color: T2, margin: '0 0 4px 0', lineHeight: '20px' }}>
+                1. Qu'est-ce qui bloque le plus le groupe avec l'IA aujourd'hui ?
+              </Text>
+              <Text style={{ fontSize: '13px', color: T2, margin: '0 0 4px 0', lineHeight: '20px' }}>
+                2. Un usage IA dont le groupe est fier ou qui a marque ?
+              </Text>
+              <Text style={{ fontSize: '13px', color: T2, margin: '0', lineHeight: '20px' }}>
+                3. La priorite n°1 pour les 6 prochains mois ?
               </Text>
             </Section>
           </Section>
@@ -1193,26 +1641,35 @@ export const LeclercFrouardJ12 = ({
                 marginBottom: '16px',
               }}
             >
-              <Text style={{ fontSize: '13px', color: T1, margin: '0 0 8px 0', lineHeight: '22px' }}>
-                <strong style={{ color: GREEN }}>Solide</strong> — Acculturation generale IA (outils, vocabulaire, limites)
+              <Text style={{ fontSize: '13px', color: T1, margin: '0 0 10px 0', lineHeight: '22px' }}>
+                <strong style={{ color: GREEN }}>Solide</strong> — Acculturation generale IA
+                <br />
+                <span style={{ fontSize: '12px', color: T3 }}>Livrable : Bibliotheque de prompts Drive | Suite : automatiser les syntheses</span>
               </Text>
-              <Text style={{ fontSize: '13px', color: T1, margin: '0 0 8px 0', lineHeight: '22px' }}>
-                <strong style={{ color: GREEN }}>Bien engage</strong> — Comptes-rendus & notes automatises
+              <Text style={{ fontSize: '13px', color: T1, margin: '0 0 10px 0', lineHeight: '22px' }}>
+                <strong style={{ color: GREEN }}>Bien engage</strong> — Comptes-rendus & notes
+                <br />
+                <span style={{ fontSize: '12px', color: T3 }}>Livrable : Templates CR Drive | Suite : integrer dans la routine hebdo</span>
               </Text>
-              <Text style={{ fontSize: '13px', color: T1, margin: '0 0 8px 0', lineHeight: '22px' }}>
-                <strong style={{ color: BLUE }}>En progression</strong> — RH / Social (plannings, badgeages, droit du travail)
+              <Text style={{ fontSize: '13px', color: T1, margin: '0 0 10px 0', lineHeight: '22px' }}>
+                <strong style={{ color: BLUE }}>En progression</strong> — RH / Social
+                <br />
+                <span style={{ fontSize: '12px', color: T3 }}>Livrable : Support Formation Klatovsky (Drive) | Suite : automatiser le suivi badgeages</span>
               </Text>
-              <Text style={{ fontSize: '13px', color: T1, margin: '0 0 8px 0', lineHeight: '22px' }}>
-                <strong style={{ color: BLUE }}>En progression</strong> — Plannings et optimisation des effectifs
+              <Text style={{ fontSize: '13px', color: T1, margin: '0 0 10px 0', lineHeight: '22px' }}>
+                <strong style={{ color: BLUE }}>En progression</strong> — Qualite / Goodays
+                <br />
+                <span style={{ fontSize: '12px', color: T3 }}>Livrable : Templates de reponses clients | Suite : routine hebdo J-2</span>
               </Text>
-              <Text style={{ fontSize: '13px', color: T1, margin: '0 0 8px 0', lineHeight: '22px' }}>
-                <strong style={{ color: BLUE }}>En progression</strong> — Qualite / Goodays (reponses clients, HACCP)
-              </Text>
-              <Text style={{ fontSize: '13px', color: T1, margin: '0 0 8px 0', lineHeight: '22px' }}>
-                <strong style={{ color: ORANGE }}>Demonstration avancee</strong> — Finance / Reporting (COMBINE, marges)
+              <Text style={{ fontSize: '13px', color: T1, margin: '0 0 10px 0', lineHeight: '22px' }}>
+                <strong style={{ color: ORANGE }}>Demonstration avancee</strong> — Finance / Reporting
+                <br />
+                <span style={{ fontSize: '12px', color: T3 }}>Livrable : Demo OpenClaw Finance | Suite : deployer l'agent Finance en production</span>
               </Text>
               <Text style={{ fontSize: '13px', color: T1, margin: '0', lineHeight: '22px' }}>
                 <strong style={{ color: ORANGE }}>Pret au deploiement</strong> — Agents IA autonomes (ClawdBot)
+                <br />
+                <span style={{ fontSize: '12px', color: T3 }}>Livrable : 7 agents Telegram operationnels | Suite : deploiement pilote</span>
               </Text>
             </Section>
 
