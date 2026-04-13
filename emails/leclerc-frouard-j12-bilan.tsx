@@ -652,7 +652,7 @@ export const LeclercFrouardJ12 = ({
 
             {/* Infographic ClawdBot */}
             <Img
-              src="https://symplesssp.github.io/Mailreact/emails/static/infographic-clawdbot-agents.png"
+              src="https://symplesssp.github.io/Mailreact/emails/static/infographic-clawdbot-agents-v2.png"
               width="400"
               alt="ClawdBot — 7 agents IA Telegram pour E.Leclerc Frouard"
               style={{ width: '80%', display: 'block', margin: '0 auto 4px auto' }}
@@ -924,7 +924,7 @@ export const LeclercFrouardJ12 = ({
 
             {/* Infographic ICID */}
             <Img
-              src="https://symplesssp.github.io/Mailreact/emails/static/infographic-icid-framework.png"
+              src="https://symplesssp.github.io/Mailreact/emails/static/infographic-icid-framework-v2.png"
               width="400"
               alt="Framework ICID — Instruction, Contexte, Input Data, Output Indicator"
               style={{ width: '80%', display: 'block', margin: '0 auto 4px auto' }}
@@ -1259,7 +1259,7 @@ export const LeclercFrouardJ12 = ({
 
             {/* Infographic Workspace Studio */}
             <Img
-              src="https://symplesssp.github.io/Mailreact/emails/static/infographic-workspace-studio.png"
+              src="https://symplesssp.github.io/Mailreact/emails/static/infographic-workspace-studio-v2.png"
               width="400"
               alt="Workspace Studio — Starter, Steps, Variables"
               style={{ width: '80%', display: 'block', margin: '0 auto 4px auto' }}
